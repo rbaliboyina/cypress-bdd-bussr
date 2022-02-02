@@ -1,0 +1,25 @@
+Feature: GET Requests
+
+    This feature file containing all GET related info
+
+    @response @regression
+    Scenario Outline: GET Requests
+        Given User Initiate a GET request with data <uri>
+        Then  response should be with <status_code> <response>
+
+        Examples:
+            | uri                                  | status_code | response                                                   |
+            | api/blue-green                       | 200         | blue                                                       |
+            | api/health                           | 200         | {"alive":true,"version":"1.11.0","NODE_ENV":"development"} |
+            | api/me                               | 400         | {"message":"Not a valid operator code"}                    |
+            | api/active-tickets?page=1&perPage=20 | 400         | {"message":"Not a valid operator code"}                    |
+
+
+    @statuscode
+    Scenario Outline: GET Requests with status code only
+        Given User Initiate a GET request with data <uri>
+        Then request response should be <status_code>
+
+        Examples:
+            | uri   | status_code |
+            | admin | 200         |

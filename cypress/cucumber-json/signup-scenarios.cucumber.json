@@ -1,0 +1,1256 @@
+[
+  {
+    "description": "    All Signup related test cases developed in this feature file",
+    "keyword": "Feature",
+    "name": "Fleet-Admin signup related test cases",
+    "line": 1,
+    "id": "fleet-admin-signup-related-test-cases",
+    "tags": [],
+    "uri": "signup-scenarios.feature",
+    "elements": [
+      {
+        "id": "fleet-admin-signup-related-test-cases;validating-error-message-for-invalid-email-on-sign-up-page",
+        "keyword": "Scenario",
+        "line": 15,
+        "name": "validating error message for invalid email on Sign-up page",
+        "tags": [
+          {
+            "name": "@regression",
+            "line": 8
+          },
+          {
+            "name": "@negative",
+            "line": 8
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "user navigates to Signup page",
+            "result": {
+              "status": "passed",
+              "duration": 708000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "user enter errmail@log.com1 on Email Address field",
+            "result": {
+              "status": "passed",
+              "duration": 497000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "user should get invalid email Email is not valid",
+            "result": {
+              "status": "passed",
+              "duration": 15000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "fleet-admin-signup-related-test-cases;validating-error-message-for-invalid-email-on-sign-up-page",
+        "keyword": "Scenario",
+        "line": 16,
+        "name": "validating error message for invalid email on Sign-up page",
+        "tags": [
+          {
+            "name": "@regression",
+            "line": 8
+          },
+          {
+            "name": "@negative",
+            "line": 8
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "user navigates to Signup page",
+            "result": {
+              "status": "passed",
+              "duration": 250000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "user enter errmail@mail#archive.com on Email Address field",
+            "result": {
+              "status": "passed",
+              "duration": 554000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "user should get invalid email Email is not valid",
+            "result": {
+              "status": "passed",
+              "duration": 7000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "fleet-admin-signup-related-test-cases;validating-error-message-for-invalid-email-on-sign-up-page",
+        "keyword": "Scenario",
+        "line": 17,
+        "name": "validating error message for invalid email on Sign-up page",
+        "tags": [
+          {
+            "name": "@regression",
+            "line": 8
+          },
+          {
+            "name": "@negative",
+            "line": 8
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "user navigates to Signup page",
+            "result": {
+              "status": "passed",
+              "duration": 200000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "user enter errormail.def@mail on Email Address field",
+            "result": {
+              "status": "passed",
+              "duration": 495000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "user should get invalid email Email is not valid",
+            "result": {
+              "status": "passed",
+              "duration": 8000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "fleet-admin-signup-related-test-cases;validating-error-message-for-invalid-email-on-sign-up-page",
+        "keyword": "Scenario",
+        "line": 18,
+        "name": "validating error message for invalid email on Sign-up page",
+        "tags": [
+          {
+            "name": "@regression",
+            "line": 8
+          },
+          {
+            "name": "@negative",
+            "line": 8
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "user navigates to Signup page",
+            "result": {
+              "status": "passed",
+              "duration": 288000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "user enter errormail.def@mail..com on Email Address field",
+            "result": {
+              "status": "passed",
+              "duration": 547000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "user should get invalid email Email is not valid",
+            "result": {
+              "status": "passed",
+              "duration": 7000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "fleet-admin-signup-related-test-cases;validating-error-message-for-invalid-email-on-sign-up-page",
+        "keyword": "Scenario",
+        "line": 19,
+        "name": "validating error message for invalid email on Sign-up page",
+        "tags": [
+          {
+            "name": "@regression",
+            "line": 8
+          },
+          {
+            "name": "@negative",
+            "line": 8
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "user navigates to Signup page",
+            "result": {
+              "status": "passed",
+              "duration": 288000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "user enter errormail..def@mail.com on Email Address field",
+            "result": {
+              "status": "passed",
+              "duration": 557000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "user should get invalid email Email is not valid",
+            "result": {
+              "status": "passed",
+              "duration": 7000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "fleet-admin-signup-related-test-cases;validating-error-message-for-invalid-email-on-sign-up-page",
+        "keyword": "Scenario",
+        "line": 20,
+        "name": "validating error message for invalid email on Sign-up page",
+        "tags": [
+          {
+            "name": "@regression",
+            "line": 8
+          },
+          {
+            "name": "@negative",
+            "line": 8
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "user navigates to Signup page",
+            "result": {
+              "status": "passed",
+              "duration": 207000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "user enter .errormail@gmail.com on Email Address field",
+            "result": {
+              "status": "passed",
+              "duration": 523000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "user should get invalid email Email is not valid",
+            "result": {
+              "status": "passed",
+              "duration": 11000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "fleet-admin-signup-related-test-cases;validating-error-message-for-registred-email",
+        "keyword": "Scenario",
+        "line": 31,
+        "name": "validating error message for registred email",
+        "tags": [
+          {
+            "name": "@regression",
+            "line": 22
+          },
+          {
+            "name": "@negative",
+            "line": 22
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "user navigates to Signup page",
+            "result": {
+              "status": "passed",
+              "duration": 306000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 24,
+            "name": "user enter test1@gmail.com on Email Address field",
+            "result": {
+              "status": "passed",
+              "duration": 445000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 25,
+            "name": "User enter password in the password field",
+            "result": {
+              "status": "passed",
+              "duration": 218000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 26,
+            "name": "User enter operator name in the name field",
+            "result": {
+              "status": "passed",
+              "duration": 4674000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 27,
+            "name": "User click on the start now button",
+            "result": {
+              "status": "passed",
+              "duration": 113000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 28,
+            "name": "user should get Email is already in use",
+            "result": {
+              "status": "passed",
+              "duration": 92000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "fleet-admin-signup-related-test-cases;validating-error-message-for-valid-email-on-sign-up-page",
+        "keyword": "Scenario",
+        "line": 34,
+        "name": "validating error message for valid email on Sign-up page",
+        "tags": [
+          {
+            "name": "@regression",
+            "line": 33
+          },
+          {
+            "name": "@negative",
+            "line": 33
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "user navigates to Signup page",
+            "result": {
+              "status": "passed",
+              "duration": 547000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 35,
+            "name": "user enter valid email on Email Address field",
+            "result": {
+              "status": "passed",
+              "duration": 522000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 36,
+            "name": "user should not get any error message",
+            "result": {
+              "status": "passed",
+              "duration": 4000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "fleet-admin-signup-related-test-cases;validating-error-messages-for-password-on-sign-up-page",
+        "keyword": "Scenario",
+        "line": 50,
+        "name": "validating error messages for password on Sign-up page",
+        "tags": [
+          {
+            "name": "@regression",
+            "line": 39
+          },
+          {
+            "name": "@negative",
+            "line": 39
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "user navigates to Signup page",
+            "result": {
+              "status": "passed",
+              "duration": 206000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 41,
+            "name": "user enter password abcd on Password field",
+            "result": {
+              "status": "passed",
+              "duration": 315000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 42,
+            "name": "user should get password error msg Password must be atleast 9 character",
+            "result": {
+              "status": "passed",
+              "duration": 11000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 43,
+            "name": "color of password length error message should be in red",
+            "result": {
+              "status": "passed",
+              "duration": 6000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 44,
+            "name": "color of password alphabetics error message should be in red",
+            "result": {
+              "status": "passed",
+              "duration": 9000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 45,
+            "name": "color of password numbers error message should be in red",
+            "result": {
+              "status": "passed",
+              "duration": 8000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 46,
+            "name": "color of password special error message should be in red",
+            "result": {
+              "status": "passed",
+              "duration": 11000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "fleet-admin-signup-related-test-cases;validating-error-messages-for-password-on-sign-up-page",
+        "keyword": "Scenario",
+        "line": 51,
+        "name": "validating error messages for password on Sign-up page",
+        "tags": [
+          {
+            "name": "@regression",
+            "line": 39
+          },
+          {
+            "name": "@negative",
+            "line": 39
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "user navigates to Signup page",
+            "result": {
+              "status": "passed",
+              "duration": 206000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 41,
+            "name": "user enter password abcdE on Password field",
+            "result": {
+              "status": "passed",
+              "duration": 309000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 42,
+            "name": "user should get password error msg Password must be atleast 9 character",
+            "result": {
+              "status": "passed",
+              "duration": 8000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 43,
+            "name": "color of password length error message should be in red",
+            "result": {
+              "status": "passed",
+              "duration": 7000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 44,
+            "name": "color of password alphabetics error message should be in green",
+            "result": {
+              "status": "passed",
+              "duration": 5000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 45,
+            "name": "color of password numbers error message should be in red",
+            "result": {
+              "status": "passed",
+              "duration": 6000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 46,
+            "name": "color of password special error message should be in red",
+            "result": {
+              "status": "passed",
+              "duration": 8000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "fleet-admin-signup-related-test-cases;validating-error-messages-for-password-on-sign-up-page",
+        "keyword": "Scenario",
+        "line": 52,
+        "name": "validating error messages for password on Sign-up page",
+        "tags": [
+          {
+            "name": "@regression",
+            "line": 39
+          },
+          {
+            "name": "@negative",
+            "line": 39
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "user navigates to Signup page",
+            "result": {
+              "status": "passed",
+              "duration": 223000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 41,
+            "name": "user enter password abcdefghi on Password field",
+            "result": {
+              "status": "passed",
+              "duration": 375000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 42,
+            "name": "user should get password error msg Password does not meet the requirements",
+            "result": {
+              "status": "passed",
+              "duration": 7000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 43,
+            "name": "color of password length error message should be in green",
+            "result": {
+              "status": "passed",
+              "duration": 8000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 44,
+            "name": "color of password alphabetics error message should be in red",
+            "result": {
+              "status": "passed",
+              "duration": 6000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 45,
+            "name": "color of password numbers error message should be in red",
+            "result": {
+              "status": "passed",
+              "duration": 5000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 46,
+            "name": "color of password special error message should be in red",
+            "result": {
+              "status": "passed",
+              "duration": 7000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "fleet-admin-signup-related-test-cases;validating-error-messages-for-password-on-sign-up-page",
+        "keyword": "Scenario",
+        "line": 53,
+        "name": "validating error messages for password on Sign-up page",
+        "tags": [
+          {
+            "name": "@regression",
+            "line": 39
+          },
+          {
+            "name": "@negative",
+            "line": 39
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "user navigates to Signup page",
+            "result": {
+              "status": "passed",
+              "duration": 187000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 41,
+            "name": "user enter password abcdXYz on Password field",
+            "result": {
+              "status": "passed",
+              "duration": 329000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 42,
+            "name": "user should get password error msg Password must be atleast 9 character",
+            "result": {
+              "status": "passed",
+              "duration": 6000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 43,
+            "name": "color of password length error message should be in red",
+            "result": {
+              "status": "passed",
+              "duration": 5000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 44,
+            "name": "color of password alphabetics error message should be in green",
+            "result": {
+              "status": "passed",
+              "duration": 8000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 45,
+            "name": "color of password numbers error message should be in red",
+            "result": {
+              "status": "passed",
+              "duration": 5000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 46,
+            "name": "color of password special error message should be in red",
+            "result": {
+              "status": "passed",
+              "duration": 6000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "fleet-admin-signup-related-test-cases;validating-error-messages-for-password-on-sign-up-page",
+        "keyword": "Scenario",
+        "line": 54,
+        "name": "validating error messages for password on Sign-up page",
+        "tags": [
+          {
+            "name": "@regression",
+            "line": 39
+          },
+          {
+            "name": "@negative",
+            "line": 39
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "user navigates to Signup page",
+            "result": {
+              "status": "passed",
+              "duration": 197000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 41,
+            "name": "user enter password abcdefghiXYZ on Password field",
+            "result": {
+              "status": "passed",
+              "duration": 392000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 42,
+            "name": "user should get password error msg Password does not meet the requirements",
+            "result": {
+              "status": "passed",
+              "duration": 8000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 43,
+            "name": "color of password length error message should be in green",
+            "result": {
+              "status": "passed",
+              "duration": 6000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 44,
+            "name": "color of password alphabetics error message should be in green",
+            "result": {
+              "status": "passed",
+              "duration": 6000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 45,
+            "name": "color of password numbers error message should be in red",
+            "result": {
+              "status": "passed",
+              "duration": 5000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 46,
+            "name": "color of password special error message should be in red",
+            "result": {
+              "status": "passed",
+              "duration": 9000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "fleet-admin-signup-related-test-cases;validating-error-messages-for-password-on-sign-up-page",
+        "keyword": "Scenario",
+        "line": 55,
+        "name": "validating error messages for password on Sign-up page",
+        "tags": [
+          {
+            "name": "@regression",
+            "line": 39
+          },
+          {
+            "name": "@negative",
+            "line": 39
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "user navigates to Signup page",
+            "result": {
+              "status": "passed",
+              "duration": 201000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 41,
+            "name": "user enter password xyz9abc on Password field",
+            "result": {
+              "status": "passed",
+              "duration": 348000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 42,
+            "name": "user should get password error msg Password must be atleast 9 character",
+            "result": {
+              "status": "passed",
+              "duration": 14000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 43,
+            "name": "color of password length error message should be in red",
+            "result": {
+              "status": "passed",
+              "duration": 7000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 44,
+            "name": "color of password alphabetics error message should be in red",
+            "result": {
+              "status": "passed",
+              "duration": 4000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 45,
+            "name": "color of password numbers error message should be in green",
+            "result": {
+              "status": "passed",
+              "duration": 9000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 46,
+            "name": "color of password special error message should be in red",
+            "result": {
+              "status": "passed",
+              "duration": 6000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "fleet-admin-signup-related-test-cases;validating-error-messages-for-password-on-sign-up-page",
+        "keyword": "Scenario",
+        "line": 56,
+        "name": "validating error messages for password on Sign-up page",
+        "tags": [
+          {
+            "name": "@regression",
+            "line": 39
+          },
+          {
+            "name": "@negative",
+            "line": 39
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "user navigates to Signup page",
+            "result": {
+              "status": "passed",
+              "duration": 210000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 41,
+            "name": "user enter password abcdefghiXYZ9 on Password field",
+            "result": {
+              "status": "passed",
+              "duration": 417000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 42,
+            "name": "user should get password error msg Password does not meet the requirements",
+            "result": {
+              "status": "passed",
+              "duration": 7000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 43,
+            "name": "color of password length error message should be in green",
+            "result": {
+              "status": "passed",
+              "duration": 6000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 44,
+            "name": "color of password alphabetics error message should be in green",
+            "result": {
+              "status": "passed",
+              "duration": 5000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 45,
+            "name": "color of password numbers error message should be in green",
+            "result": {
+              "status": "passed",
+              "duration": 5000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 46,
+            "name": "color of password special error message should be in red",
+            "result": {
+              "status": "passed",
+              "duration": 7000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "fleet-admin-signup-related-test-cases;validating-error-messages-for-password-on-sign-up-page",
+        "keyword": "Scenario",
+        "line": 57,
+        "name": "validating error messages for password on Sign-up page",
+        "tags": [
+          {
+            "name": "@regression",
+            "line": 39
+          },
+          {
+            "name": "@negative",
+            "line": 39
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "user navigates to Signup page",
+            "result": {
+              "status": "passed",
+              "duration": 202000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 41,
+            "name": "user enter password abcdefghiXYZ@ on Password field",
+            "result": {
+              "status": "passed",
+              "duration": 402000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 42,
+            "name": "user should get password error msg Password does not meet the requirements",
+            "result": {
+              "status": "passed",
+              "duration": 6000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 43,
+            "name": "color of password length error message should be in green",
+            "result": {
+              "status": "passed",
+              "duration": 6000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 44,
+            "name": "color of password alphabetics error message should be in green",
+            "result": {
+              "status": "passed",
+              "duration": 5000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 45,
+            "name": "color of password numbers error message should be in red",
+            "result": {
+              "status": "passed",
+              "duration": 8000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 46,
+            "name": "color of password special error message should be in green",
+            "result": {
+              "status": "passed",
+              "duration": 7000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "fleet-admin-signup-related-test-cases;operator-sign-up-for-bussr",
+        "keyword": "Scenario",
+        "line": 62,
+        "name": "Operator sign up for Bussr",
+        "tags": [
+          {
+            "name": "@regression",
+            "line": 61
+          },
+          {
+            "name": "@positive",
+            "line": 61
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "user navigates to Signup page",
+            "result": {
+              "status": "passed",
+              "duration": 199000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 63,
+            "name": "User enter email in the email field",
+            "result": {
+              "status": "passed",
+              "duration": 431000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 64,
+            "name": "User enter password in the password field",
+            "result": {
+              "status": "passed",
+              "duration": 296000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 65,
+            "name": "User enter operator name in the name field",
+            "result": {
+              "status": "passed",
+              "duration": 4656000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 66,
+            "name": "User click on the start now button",
+            "result": {
+              "status": "passed",
+              "duration": 108000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 67,
+            "name": "User should land in Country selection page",
+            "result": {
+              "status": "passed",
+              "duration": 4210000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 68,
+            "name": "User selects given Country",
+            "result": {
+              "status": "passed",
+              "duration": 4208000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 69,
+            "name": "User click on Proceed button",
+            "result": {
+              "status": "passed",
+              "duration": 164000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 70,
+            "name": "User lands into over view page",
+            "result": {
+              "status": "passed",
+              "duration": 1963000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,15 @@
+{
+    "reporter": "cypress-mochawesome-reporter",
+    "chromeWebSecurity": false,
+    "PageLoadTimeout": 60000,
+    "reporterOptions": {
+        "reportDir": "cypress/report",
+        "charts": true,
+        "reportPageTitle": "custom-title",
+        "embeddedScreenshots": true,
+        "overwrite": false,
+        "json": true,
+        "html": true
+    },
+    "testFiles": "**/*.feature"
+}

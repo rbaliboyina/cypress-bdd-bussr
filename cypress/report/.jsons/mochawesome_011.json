@@ -1,0 +1,132 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 1,
+    "failures": 0,
+    "start": "2022-01-10T05:19:28.254Z",
+    "end": "2022-01-10T05:20:02.986Z",
+    "duration": 34732,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 50,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 1,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "b21315f4-06ed-4cbc-8b32-4cb75d223438",
+      "title": "",
+      "fullFile": "cypress/integration/operator.feature",
+      "file": "cypress/integration/operator.feature",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ef15ccc5-936c-4d02-a69f-8beb7dc177f0",
+          "title": "operator related test cases",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Operator sign up for Bussr",
+              "fullTitle": "operator related test cases Operator sign up for Bussr",
+              "timedOut": null,
+              "duration": 29938,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "ef7efcd1-6e96-4a23-89d2-0c3cce75eac1",
+              "parentUUID": "ef15ccc5-936c-4d02-a69f-8beb7dc177f0",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Fleet Admin Login (example #1)",
+              "fullTitle": "operator related test cases Fleet Admin Login (example #1)",
+              "timedOut": null,
+              "duration": 407,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      {\n        \"title\": \"Failed screenshot\",\n        \"value\": \"\\\\operator.feature\\\\operator related test cases -- Fleet Admin Login (example #1) (failed).png\"\n      }\n    ]\n  ]\n}",
+              "code": "// register this scenario with the cucumber data collector\n// but don't run it\n// Tell mocha this is a skipped test so it also shows correctly in Cypress\nconst state = window.testState;\ncy.then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() => state.onFinishScenario(scenario))\n  // eslint-disable-next-line func-names\n  .then(function () {\n    return this.skip();\n  });",
+              "err": {
+                "message": "CypressError: sync skip; aborting execution",
+                "estack": "[object Object]\nFrom Your Spec Code:\n    at Context.eval (https://qa-operator.bussr.app/__cypress/tests?p=cypress\\integration\\operator.feature:12175:10)",
+                "diff": null
+              },
+              "uuid": "961410a8-f754-49e8-8748-c7d22e004bd9",
+              "parentUUID": "ef15ccc5-936c-4d02-a69f-8beb7dc177f0",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ef7efcd1-6e96-4a23-89d2-0c3cce75eac1"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [
+            "961410a8-f754-49e8-8748-c7d22e004bd9"
+          ],
+          "duration": 30345,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.3.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress\\report\\.jsons",
+        "charts": true,
+        "reportPageTitle": "custom-title",
+        "embeddedScreenshots": true,
+        "overwrite": false,
+        "json": true,
+        "html": false
+      },
+      "version": "5.2.0"
+    }
+  }
+}

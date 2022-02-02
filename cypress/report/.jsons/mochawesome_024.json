@@ -1,0 +1,127 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-01-17T04:27:40.738Z",
+    "end": "2022-01-17T04:27:41.202Z",
+    "duration": 464,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "9b34d1c8-c5d6-4d0f-86ce-71ae022fba4d",
+      "title": "",
+      "fullFile": "cypress/integration/api-feature-files/POST_request.feature",
+      "file": "cypress/integration/api-feature-files/POST_request.feature",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b194f7fe-c518-4f59-95c9-f1b214055990",
+          "title": "POST Requests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "POST Requests (example #1)",
+              "fullTitle": "POST Requests POST Requests (example #1)",
+              "timedOut": null,
+              "duration": 184,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "36658359-c754-4fae-86ff-08d664d8a01e",
+              "parentUUID": "b194f7fe-c518-4f59-95c9-f1b214055990",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "POST Requests with authorization (example #1)",
+              "fullTitle": "POST Requests POST Requests with authorization (example #1)",
+              "timedOut": null,
+              "duration": 225,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "ff1b4b1e-1090-434c-8133-3a098acd8355",
+              "parentUUID": "b194f7fe-c518-4f59-95c9-f1b214055990",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "36658359-c754-4fae-86ff-08d664d8a01e",
+            "ff1b4b1e-1090-434c-8133-3a098acd8355"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 409,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.3.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress\\report\\.jsons",
+        "charts": true,
+        "reportPageTitle": "custom-title",
+        "embeddedScreenshots": true,
+        "overwrite": false,
+        "json": true,
+        "html": false
+      },
+      "version": "5.2.0"
+    }
+  }
+}

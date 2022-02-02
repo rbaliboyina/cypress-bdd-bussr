@@ -1,0 +1,132 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-01-10T05:40:17.828Z",
+    "end": "2022-01-10T05:41:04.127Z",
+    "duration": 46299,
+    "testsRegistered": 2,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "4eb67791-0bfa-4857-aa1a-2513cd92b980",
+      "title": "",
+      "fullFile": "cypress/integration/operator.feature",
+      "file": "cypress/integration/operator.feature",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "9339a68e-bf8e-4d5b-b066-5cec788fcdf1",
+          "title": "operator related test cases",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Operator sign up for Bussr",
+              "fullTitle": "operator related test cases Operator sign up for Bussr",
+              "timedOut": null,
+              "duration": 40074,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "09cf8710-6180-4439-b5ff-28d9c894cf40",
+              "parentUUID": "9339a68e-bf8e-4d5b-b066-5cec788fcdf1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Fleet Admin Login (example #1)",
+              "fullTitle": "operator related test cases Fleet Admin Login (example #1)",
+              "timedOut": null,
+              "duration": 1348,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      {\n        \"title\": \"Failed screenshot\",\n        \"value\": \"\\\\operator.feature\\\\operator related test cases -- Fleet Admin Login (example #1) (failed).png\"\n      }\n    ]\n  ]\n}",
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {
+                "message": "CypressError: `cy.type()` failed because it requires a DOM element.\n\nThe subject received was:\n\n  > `undefined`\n\nThe previous command that ran was:\n\n  > `cy.get()`",
+                "estack": "CypressError: `cy.type()` failed because it requires a DOM element.\n\nThe subject received was:\n\n  > `undefined`\n\nThe previous command that ran was:\n\n  > `cy.get()`\n    at ensureElement (https://qa-operator.bussr.app/__cypress/runner/cypress_runner.js:162678:76)\n    at validateType (https://qa-operator.bussr.app/__cypress/runner/cypress_runner.js:162501:16)\n    at $Cy.ensureSubjectByType (https://qa-operator.bussr.app/__cypress/runner/cypress_runner.js:162537:9)\n    at pushSubjectAndValidate (https://qa-operator.bussr.app/__cypress/runner/cypress_runner.js:171827:12)\n    at Context.<anonymous> (https://qa-operator.bussr.app/__cypress/runner/cypress_runner.js:172102:20)\nFrom Your Spec Code:\n    at loginPage.typeEmailAddress (https://qa-operator.bussr.app/__cypress/tests?p=cypress\\integration\\operator.feature:150:36)\n    at Context.eval (https://qa-operator.bussr.app/__cypress/tests?p=cypress\\integration\\operator.feature:57:25)\n    at Context.resolveAndRunStepDefinition (https://qa-operator.bussr.app/__cypress/tests?p=cypress\\integration\\operator.feature:12812:29)\n    at Context.eval (https://qa-operator.bussr.app/__cypress/tests?p=cypress\\integration\\operator.feature:12133:35)",
+                "diff": null
+              },
+              "uuid": "16097dc0-a86c-4d78-ade3-86bfc32b232d",
+              "parentUUID": "9339a68e-bf8e-4d5b-b066-5cec788fcdf1",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "09cf8710-6180-4439-b5ff-28d9c894cf40"
+          ],
+          "failures": [
+            "16097dc0-a86c-4d78-ade3-86bfc32b232d"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 41422,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.3.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress\\report\\.jsons",
+        "charts": true,
+        "reportPageTitle": "custom-title",
+        "embeddedScreenshots": true,
+        "overwrite": false,
+        "json": true,
+        "html": false
+      },
+      "version": "5.2.0"
+    }
+  }
+}

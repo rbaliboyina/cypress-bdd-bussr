@@ -1,0 +1,228 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 6,
+    "passes": 0,
+    "pending": 5,
+    "failures": 1,
+    "start": "2022-01-11T11:04:49.224Z",
+    "end": "2022-01-11T11:04:51.730Z",
+    "duration": 2506,
+    "testsRegistered": 6,
+    "passPercent": 0,
+    "pendingPercent": 83.33333333333334,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 5,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "85cb5b92-3880-418e-8593-8640abf369d3",
+      "title": "",
+      "fullFile": "cypress/integration/api-feature-files/GET_request.feature",
+      "file": "cypress/integration/api-feature-files/GET_request.feature",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e59a4bc7-556b-438c-bfea-b572a3692fdd",
+          "title": "GET Requests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "GET Requests (example #1)",
+              "fullTitle": "GET Requests GET Requests (example #1)",
+              "timedOut": null,
+              "duration": 278,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      {\n        \"title\": \"Failed screenshot\",\n        \"value\": \"\\\\api-feature-files\\\\GET_request.feature\\\\GET Requests -- GET Requests (example #1) (failed).png\"\n      }\n    ]\n  ]\n}",
+              "code": "// register this scenario with the cucumber data collector\n// but don't run it\n// Tell mocha this is a skipped test so it also shows correctly in Cypress\nconst state = window.testState;\ncy.then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() => state.onFinishScenario(scenario))\n  // eslint-disable-next-line func-names\n  .then(function () {\n    return this.skip();\n  });",
+              "err": {
+                "message": "CypressError: sync skip; aborting execution",
+                "estack": "[object Object]\nFrom Your Spec Code:\n    at Context.eval (http://localhost:61803/__cypress/tests?p=cypress\\integration\\api-feature-files\\GET_request.feature:12224:10)",
+                "diff": null
+              },
+              "uuid": "ad3f98b2-a5dc-4978-8acb-2ee053e76ca4",
+              "parentUUID": "e59a4bc7-556b-438c-bfea-b572a3692fdd",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "GET Requests (example #2)",
+              "fullTitle": "GET Requests GET Requests (example #2)",
+              "timedOut": null,
+              "duration": 192,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      {\n        \"title\": \"Failed screenshot\",\n        \"value\": \"\\\\api-feature-files\\\\GET_request.feature\\\\GET Requests -- GET Requests (example #2) (failed).png\"\n      }\n    ]\n  ]\n}",
+              "code": "// register this scenario with the cucumber data collector\n// but don't run it\n// Tell mocha this is a skipped test so it also shows correctly in Cypress\nconst state = window.testState;\ncy.then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() => state.onFinishScenario(scenario))\n  // eslint-disable-next-line func-names\n  .then(function () {\n    return this.skip();\n  });",
+              "err": {
+                "message": "CypressError: sync skip; aborting execution",
+                "estack": "[object Object]\nFrom Your Spec Code:\n    at Context.eval (http://localhost:61803/__cypress/tests?p=cypress\\integration\\api-feature-files\\GET_request.feature:12224:10)",
+                "diff": null
+              },
+              "uuid": "0644002f-4e44-4e85-867b-ec4ed0d95f65",
+              "parentUUID": "e59a4bc7-556b-438c-bfea-b572a3692fdd",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "GET Requests (example #3)",
+              "fullTitle": "GET Requests GET Requests (example #3)",
+              "timedOut": null,
+              "duration": 280,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      {\n        \"title\": \"Failed screenshot\",\n        \"value\": \"\\\\api-feature-files\\\\GET_request.feature\\\\GET Requests -- GET Requests (example #3) (failed).png\"\n      }\n    ]\n  ]\n}",
+              "code": "// register this scenario with the cucumber data collector\n// but don't run it\n// Tell mocha this is a skipped test so it also shows correctly in Cypress\nconst state = window.testState;\ncy.then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() => state.onFinishScenario(scenario))\n  // eslint-disable-next-line func-names\n  .then(function () {\n    return this.skip();\n  });",
+              "err": {
+                "message": "CypressError: sync skip; aborting execution",
+                "estack": "[object Object]\nFrom Your Spec Code:\n    at Context.eval (http://localhost:61803/__cypress/tests?p=cypress\\integration\\api-feature-files\\GET_request.feature:12224:10)",
+                "diff": null
+              },
+              "uuid": "115dd371-7563-48ae-b349-f1a33acc0a16",
+              "parentUUID": "e59a4bc7-556b-438c-bfea-b572a3692fdd",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "GET Requests (example #4)",
+              "fullTitle": "GET Requests GET Requests (example #4)",
+              "timedOut": null,
+              "duration": 283,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      {\n        \"title\": \"Failed screenshot\",\n        \"value\": \"\\\\api-feature-files\\\\GET_request.feature\\\\GET Requests -- GET Requests (example #4) (failed).png\"\n      }\n    ]\n  ]\n}",
+              "code": "// register this scenario with the cucumber data collector\n// but don't run it\n// Tell mocha this is a skipped test so it also shows correctly in Cypress\nconst state = window.testState;\ncy.then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() => state.onFinishScenario(scenario))\n  // eslint-disable-next-line func-names\n  .then(function () {\n    return this.skip();\n  });",
+              "err": {
+                "message": "CypressError: sync skip; aborting execution",
+                "estack": "[object Object]\nFrom Your Spec Code:\n    at Context.eval (http://localhost:61803/__cypress/tests?p=cypress\\integration\\api-feature-files\\GET_request.feature:12224:10)",
+                "diff": null
+              },
+              "uuid": "28b3b5c8-1509-4f59-b764-d81382e40de9",
+              "parentUUID": "e59a4bc7-556b-438c-bfea-b572a3692fdd",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "GET Requests (example #5)",
+              "fullTitle": "GET Requests GET Requests (example #5)",
+              "timedOut": null,
+              "duration": 256,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      {\n        \"title\": \"Failed screenshot\",\n        \"value\": \"\\\\api-feature-files\\\\GET_request.feature\\\\GET Requests -- GET Requests (example #5) (failed).png\"\n      }\n    ]\n  ]\n}",
+              "code": "// register this scenario with the cucumber data collector\n// but don't run it\n// Tell mocha this is a skipped test so it also shows correctly in Cypress\nconst state = window.testState;\ncy.then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() => state.onFinishScenario(scenario))\n  // eslint-disable-next-line func-names\n  .then(function () {\n    return this.skip();\n  });",
+              "err": {
+                "message": "CypressError: sync skip; aborting execution",
+                "estack": "[object Object]\nFrom Your Spec Code:\n    at Context.eval (http://localhost:61803/__cypress/tests?p=cypress\\integration\\api-feature-files\\GET_request.feature:12224:10)",
+                "diff": null
+              },
+              "uuid": "25b9ff04-4882-4696-8258-9db9db0b3af3",
+              "parentUUID": "e59a4bc7-556b-438c-bfea-b572a3692fdd",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "GET Requests (example #1)",
+              "fullTitle": "GET Requests GET Requests (example #1)",
+              "timedOut": null,
+              "duration": 1048,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      {\n        \"title\": \"Failed screenshot\",\n        \"value\": \"\\\\api-feature-files\\\\GET_request.feature\\\\GET Requests -- GET Requests (example #1) (failed) (1).png\"\n      }\n    ]\n  ]\n}",
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {
+                "message": "Error: Step implementation missing for: response should be with 200",
+                "estack": "Error: Step implementation missing for: response should be with 200\n    at Context.resolveAndRunStepDefinition (http://localhost:61803/__cypress/tests?p=cypress\\integration\\api-feature-files\\GET_request.feature:12867:11)\n    at Context.eval (http://localhost:61803/__cypress/tests?p=cypress\\integration\\api-feature-files\\GET_request.feature:12182:35)",
+                "diff": null
+              },
+              "uuid": "9d832295-87cf-485f-bd66-335ad2a828e2",
+              "parentUUID": "e59a4bc7-556b-438c-bfea-b572a3692fdd",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "9d832295-87cf-485f-bd66-335ad2a828e2"
+          ],
+          "pending": [],
+          "skipped": [
+            "ad3f98b2-a5dc-4978-8acb-2ee053e76ca4",
+            "0644002f-4e44-4e85-867b-ec4ed0d95f65",
+            "115dd371-7563-48ae-b349-f1a33acc0a16",
+            "28b3b5c8-1509-4f59-b764-d81382e40de9",
+            "25b9ff04-4882-4696-8258-9db9db0b3af3"
+          ],
+          "duration": 2337,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.3.1"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress\\report\\.jsons",
+        "charts": true,
+        "reportPageTitle": "custom-title",
+        "embeddedScreenshots": true,
+        "overwrite": false,
+        "json": true,
+        "html": false
+      },
+      "version": "5.2.0"
+    }
+  }
+}

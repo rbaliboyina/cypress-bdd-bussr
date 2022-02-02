@@ -1,0 +1,40 @@
+{
+  "name": "cypress-mochawesome-chai",
+  "version": "1.0.0",
+  "description": "bussr demo",
+  "main": "index.js",
+  "ng-recaptcha": "^7.0.1",
+  "scripts": {
+    "test": "test",
+    "cypress:open": "cypress open"
+  },
+  "author": "bussr",
+  "license": "ISC",
+  "devDependencies": {
+    "chai-colors": "^1.0.1",
+    "cucumber-html-reporter": "^5.5.0",
+    "cypress": "^9.3.1",
+    "cypress-cucumber-attach-screenshots-to-failed-steps": "^1.0.0",
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "cypress-mochawesome-reporter": "^2.3.0",
+    "cypress-plugin-tab": "^1.0.5",
+    "cypress-wait-until": "^1.7.2",
+    "cypress-xpath": "^1.6.2",
+    "mochawesome-merge": "^4.2.1",
+    "multiple-cucumber-html-reporter": "^1.18.3"
+  },
+  "dependencies": {
+    "casual": "^1.6.2",
+    "faker": "^5.5.3"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": false,
+    "step_definitions": "cypress/integration/step-definitions/",
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/cucumber-json",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
+  }
+}

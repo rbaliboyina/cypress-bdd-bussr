@@ -1,0 +1,132 @@
+[
+  {
+    "description": "    All user management related test cases developed in this feature file",
+    "keyword": "Feature",
+    "name": "User management related test cases under fleet admin portal",
+    "line": 1,
+    "id": "user-management-related-test-cases-under-fleet-admin-portal",
+    "tags": [],
+    "uri": "user-management-scenarios.feature",
+    "elements": [
+      {
+        "id": "user-management-related-test-cases-under-fleet-admin-portal;validate-back-button-in-add-new-user-page",
+        "keyword": "Scenario",
+        "line": 60,
+        "name": "Validate back button in Add New User page",
+        "tags": [
+          {
+            "name": "@regression",
+            "line": 59
+          },
+          {
+            "name": "@positive",
+            "line": 59
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "user navigates to login page",
+            "result": {
+              "status": "passed",
+              "duration": 910000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "user enter Email in email field",
+            "result": {
+              "status": "passed",
+              "duration": 899000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "user enter Password in password field",
+            "result": {
+              "status": "passed",
+              "duration": 341000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 9,
+            "name": "user click on Sign In button",
+            "result": {
+              "status": "passed",
+              "duration": 85000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "user should land in overview page",
+            "result": {
+              "status": "passed",
+              "duration": 2965000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 61,
+            "name": "user click on User Management",
+            "result": {
+              "status": "passed",
+              "duration": 20913000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 62,
+            "name": "user click on Add New User button",
+            "result": {
+              "status": "passed",
+              "duration": 180000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 63,
+            "name": "user should able to view Add New User heading with back icon",
+            "result": {
+              "status": "passed",
+              "duration": 21000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 64,
+            "name": "user click on back button",
+            "result": {
+              "status": "passed",
+              "duration": 142000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 65,
+            "name": "user should navigate to User management page",
+            "result": {
+              "status": "passed",
+              "duration": 34000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

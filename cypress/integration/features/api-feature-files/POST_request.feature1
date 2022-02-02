@@ -1,0 +1,20 @@
+Feature: POST Requests
+
+    This feature file containing all POST related requests
+
+    Scenario Outline: POST Requests
+        Given User initiate a POST request with <uri> and load the body from fixtures with the <key>
+        Then POST response should be with <status>
+
+        Examples:
+            | uri         | status | key   |
+            | admin/login | 200    | login |
+
+
+    Scenario Outline: POST Requests with authorization
+        Given POST request with admin-key and <uri> and load the body from fixtures with the <key>
+        Then POST response should be with <status>
+
+        Examples:
+            | uri                                  | status | key |
+            | admin/api/resources/City/actions/new | 200    | bus |
