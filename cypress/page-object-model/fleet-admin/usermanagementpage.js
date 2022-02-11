@@ -12,7 +12,28 @@ class usermanagement {
         addNewUserButton: () => cy.get('a.is-primary>div.btn-text:nth-of-type(1)'),
         downloadButton: () => cy.get('a.bordered-btn>svg'),
         filterButton: () => cy.get('div.action-header__HeaderButtons-q7dhgh-4>a:nth-of-type(3)'),
-        usermanagementlabel: () => cy.get('h1.action-header__HeaderTitle-q7dhgh-3')
+        usermanagementlabel: () => cy.get('li.is-active>a.breadcrumbs__BreadcrumbLink-l5j25e-1.fMNXZO:nth-of-type(1)'),
+        moreinfoFirstRow: () => cy.get('div.is-right.is-hoverable.dropdown'),
+        userInfo: () => cy.xpath("//div[text()='User Information']"),
+        filterIcon: () => cy.get('a.styled-button__StyledButton-u8dm3f-0.button.fhLnZT>span.icon'),
+        filterEmail: () => cy.get('input[name=filter-email]')
+    }
+
+    isFilterEmailVisible() {
+        this.elements.filterEmail().should('be.visible');
+    }
+
+    clickFilterIcon() {
+        this.elements.filterIcon().click();
+    }
+
+    userInfoIsVisible() {
+        this.elements.userInfo().should('be.visible');
+    }
+
+    clickUserInfo() {
+        this.elements.moreinfoFirstRow().trigger('onmouseover')
+        this.elements.userInfo().click({ force: true })
     }
 
     getUserManagementLabel() {

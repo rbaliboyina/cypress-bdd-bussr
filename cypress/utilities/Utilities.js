@@ -10,8 +10,8 @@ class Utilities {
     }
 
     //countries allowed by the Bussr while signing up the operator
-   // countries = ['Philippines', 'Indonesia', 'Singapore', 'Malaysia', 'UAE', 'India'];
-   countries = ['Philippines', 'Indonesia'];
+    // countries = ['Philippines', 'Indonesia', 'Singapore', 'Malaysia', 'UAE', 'India'];
+    countries = ['Philippines', 'Indonesia'];
 
     //required for date utilities
     months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
@@ -37,7 +37,7 @@ class Utilities {
     }
 
     generateTravelsName() {
-        let travelName;
+        let travelName='';
         travelName = this.getRandomCharFromString(this.allowed.lowers);
         travelName = travelName + this.getRandomCharFromString(this.allowed.uppers);
         travelName = travelName + this.getRandomCharFromString(this.allowed.lowers);
@@ -49,7 +49,7 @@ class Utilities {
     }
 
     generateVehicleId() {
-        var vehicleID;
+        var vehicleID=''
         vehicleID = vehicleID + this.getRandomCharFromString(this.allowed.uppers);
         vehicleID = vehicleID + this.getRandomCharFromString(this.allowed.uppers);
         for (var i = 0; i <= 1; i++) {
@@ -62,8 +62,18 @@ class Utilities {
         return vehicleID;
     }
 
+    generateOperatorId() {
+        var operatorID=''
+        operatorID = operatorID + this.getRandomCharFromString(this.allowed.lowers);
+        operatorID = operatorID + this.getRandomCharFromString(this.allowed.lowers);
+        for (var i = 0; i <= 3; i++) {
+            operatorID = operatorID + this.getRandomCharFromString(this.allowed.numbers);
+        }
+        return operatorID;
+    }
+
     generateName() {
-        var name;
+        var name="";
         for (var i = 0; i < 10; i++) {
             name = name + this.getRandomCharFromString(this.allowed.lowers);
         }
@@ -71,7 +81,7 @@ class Utilities {
     }
 
     generatePhoneNumber() {
-        var phoneNumber;
+        var phoneNumber="";
         for (var i = 1; i <= 9; i++) {
             phoneNumber = phoneNumber + this.getRandomCharFromString(this.allowed.numbers);
         }
@@ -79,7 +89,7 @@ class Utilities {
     }
 
     generatePassword() {
-        let pwd;
+        let pwd="";
 
         pwd = this.getRandomCharFromString(this.allowed.uppers);
         pwd = pwd + this.getRandomCharFromString(this.allowed.lowers);

@@ -1,3 +1,6 @@
+///<reference types="Cypress" />
+import Utilities from '../../utilities/Utilities';
+
 class addNewUser {
     elements = {
         addNewUserLabel: () => cy.get('h1.action-header__HeaderTitle-q7dhgh-3'),
@@ -11,6 +14,41 @@ class addNewUser {
         saveButton: () => cy.get('button.is-primary > span'),
         errormessages: () => cy.get('div.help.is-danger'),
         backbutton: () => cy.get('i.icomoon-pagination-left'),
+    }
+
+    fillAddNewUserForm(accesslevel) {
+        var email = Utilities.generateEmail();
+        this.typeEmailAddress(email)
+        this.typeAuthPassword(Utilities.generatePassword())
+        this.typeAccessLevel(accesslevel);
+        this.typeUserName(Utilities.generateName());
+        this.typeMobileNumber(Utilities.generatePhoneNumber());
+        this.typeOperatorID(Utilities.generateOperatorId());
+        return email;
+    }
+
+    typeEmailAddress(email) {
+        this.elements.emailAddress().type(email);
+    }
+
+    typeAuthPassword(pwd) {
+        this.elements.authPassword().type(pwd);
+    }
+
+    typeAccessLevel(accesslevel) {
+        this.elements.accessLevel().type(accesslevel).type('{enter}', { multiple: true });
+    }
+
+    typeUserName(data) {
+        this.elements.userName().type(data);
+    }
+
+    typeMobileNumber(data) {
+        this.elements.mobileNumber().type(data);
+    }
+
+    typeOperatorID(data) {
+        this.elements.operatorId().type(data);
     }
 
     clickBackButton() {

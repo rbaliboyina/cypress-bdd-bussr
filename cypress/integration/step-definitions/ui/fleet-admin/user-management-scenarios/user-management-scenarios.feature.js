@@ -5,7 +5,8 @@ import { When, Given, And, Then } from "cypress-cucumber-preprocessor/steps";
 import addNewUserPage from "../../../../../page-object-model/fleet-admin/addNewUserPage";
 import loginPage from '../../../../../page-object-model/fleet-admin/loginpage'
 import overviewPage from '../../../../../page-object-model/fleet-admin/overviewpage'
-import usermanagementpage, { getCreatedAt } from "../../../../../page-object-model/fleet-admin/usermanagementpage";
+import usermanagementpage from "../../../../../page-object-model/fleet-admin/usermanagementpage";
+import userinfopage from '../../../../../page-object-model/fleet-admin/userInfopage'
 
 const configData = require('../../../../../fixtures/config.json');
 const loginData = require('../../../../../fixtures/fleet_adminapp_data/operator_login.json');
@@ -44,8 +45,8 @@ Then(/^user should able to view Drivers under User Administration$/, () => {
 
 describe('Validate user management', () => {
   Given(/^user click on User Management$/, () => {
-    overviewPage.clickdrivers();
     overviewPage.clickusermanagement();
+    cy.waitUntil(() => usermanagementpage.elements.addNewUserButton().should('be.visible'));
   })
 
   Then(/^user able to view respective login details in User Management page$/, () => {
@@ -126,4 +127,81 @@ describe('Validate user management', () => {
     usermanagementpage.getUserManagementLabel().should('eq', "User Management");
   })
 
+})
+
+describe('Validate Save button - with valid data', () => {
+  var email = '';
+  When(/^user fill the New User Form with random data and acess level as '(.*)'$/, (accessLevel) => {
+    email = addNewUserPage.fillAddNewUserForm(accessLevel)
+  })
+
+  And(/^user click on save button$/, () => {
+    addNewUserPage.clickSaveButton();
+  })
+
+  Then(/^user should able to view given email address in User Info page$/, () => {
+    userinfopage.isEmailMatching(email);
+  })
+
+  And(/^user should able to view Edit button$/, () => {
+    userinfopage.isEditButtonVisible();
+  })
+
+  When(/^user click on back button in User Info page$/, () => {
+    userinfopage.clickBackArrowButton();
+  })
+
+  And(/^saved user should be displayed$/, () => {
+
+  })
+})
+
+And(/^user click on User Information link by clicking on ...$/, () => {
+  usermanagementpage.clickUserInfo();
+})
+
+Then(/^user navigates to User Information page$/, () => {
+  userinfopage.getUserInfoLabel().should('eq', 'User Information');
+})
+
+And(/^user able to view Email, Authorization Password, Access Level, Craeted At and Updated At fields$/, () => {
+  userinfopage.eamilLabelIsVisible();
+  userinfopage.emailValueIsNonEmpty();
+  userinfopage.accessLevelLabelIsVisible();
+  userinfopage.accessLevelValueIsNonEmpty();
+  userinfopage.createdAtLabelIsVisible();
+  userinfopage.createdAtValueIsNonEmpty();
+  userinfopage.authPasswordLabelIsVisible();
+  userinfopage.authPasswordValueIsNonEmpty();
+  userinfopage.updatedAtLabelIsVisible();
+  userinfopage.updatedAtValueIsNonEmpty();
+})
+
+And(/^user click on Edit button$/, () => {
+  userinfopage.clickEditButton();
+})
+
+And(/^user should able to view User Information button$/, () => {
+  usermanagementpage.userInfoIsVisible();
+})
+
+And(/^user should able to view Save button$/, () => {
+  addNewUserPage.isSaveButtonVisible();
+})
+
+And(/^all the fields should be in Edit mode$/, () => {
+  addNewUserPage.isEmailAddressVisible();
+  addNewUserPage.isAuthPasswordVisible();
+  addNewUserPage.isAccessLevelVisible();
+  addNewUserPage.isUserNameVisible();
+  addNewUserPage.isMobileNumberVisible();
+  addNewUserPage.isOperatorIdVisible();
+})
+
+And(/^user click on Filter Panel hamburger icon$/, () => {
+  usermanagementpage.clickFilterIcon();
+})
+
+Then(/^user should able to view Filter popup$/, () => {
+  usermanagementpage.isFilterEmailVisible();
 })

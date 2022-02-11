@@ -1,11 +1,10 @@
 ///<reference types="Cypress" />
 
-import 'cypress-wait-until';
 const configData = require('../../fixtures/config.json');
 
 class overview {
     elements = {
-        userNamelabel: () => cy.get('#root > div > div > div > header > div > div:nth-of-type(2) > button > span', { timeout: configData.timeout }),
+        userNamelabel: () => cy.get('div.account-menu>div.menu_icon>span'),
         userAdministration: () => cy.xpath('//*[text()="USER ADMINISTRATION"]'),
         usermanagement: () => cy.xpath('//a[text()="User Management"]'),
         drivers: () => cy.xpath('//a[text()="Drivers"]'),
@@ -31,46 +30,27 @@ class overview {
     }
 
     isUserAdministrationVisible() {
-        this.elements.userAdministration().should('have.text','USER ADMINISTRATION')
+        this.elements.userAdministration().should('have.text', 'USER ADMINISTRATION')
     }
 
     isDriversVisible() {
-        cy.waitUntil(() => this.elements.drivers().should('be.visible'), {
-            errorMsg: 'Home page is still loading... not able to view the username label',
-            timeout: configData.timeout,
-            interval: configData.intervaltimeout
-        });
-
+        this.elements.drivers().should('be.visible');
         return this.elements.drivers();
     }
 
     isOverviewLabelVisible() {
-        cy.waitUntil(() => this.elements.overview().should('be.visible'), {
-            errorMsg: 'Home page is still loading... not able to view the username label',
-            timeout: configData.timeout,
-            interval: configData.intervaltimeout
-        });
+        this.elements.overview().should('be.visible');
 
         return this.elements.overview();
     }
 
     isUserManagementVisible() {
-        cy.waitUntil(() => this.elements.usermanagement().should('be.visible'), {
-            errorMsg: 'Home page is still loading... not able to view the username label',
-            timeout: configData.timeout,
-            interval: configData.intervaltimeout
-        });
-
+        this.elements.usermanagement().should('be.visible');
         return this.elements.usermanagement();
     }
 
     usernamelabel() {
-        cy.waitUntil(() => this.elements.userNamelabel().should('be.visible'), {
-            errorMsg: 'Home page is still loading... not able to view the username label',
-            timeout: configData.timeout,
-            interval: configData.intervaltimeout
-        });
-
+        this.elements.userNamelabel().should('be.visible');
         return this.elements.userNamelabel();
     }
 
@@ -123,11 +103,15 @@ class overview {
     }
 
     clickusermanagement() {
-        this.elements.usermanagement().click({ force: true });
+        this.elements.usermanagement().click();
     }
 
     usermanagementhighlighted() {
         this.elements.usermanagement().should('have.css', 'color').and('equals', 'rgb(113, 138, 244)')
+    }
+
+    drivershighlighted() {
+        this.elements.drivers().should('have.css', 'color').and('equals', 'rgb(113, 138, 244)')
     }
 
     clickoverview() {
