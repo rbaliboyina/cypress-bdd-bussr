@@ -1,11 +1,11 @@
 ///<reference types="Cypress"/>
 import 'cypress-wait-until';
-import Utilities from '../../utilities/Utilities';
-const configData = require('../../fixtures/config.json');
 
-class buspage {
+import Utilities from '../../utilities/Utilities';
+import config from '../../fixtures/config.json'
+
+class addbuspage {
     elements = {
-        addnewbus: () => cy.get('#app > section > section > div > section:first-of-type > section:first-of-type > div > a:first-of-type > div'),
         vehicleid: () => cy.get('input#plate'),
         seats: () => cy.get('input#availableSeats'),
         photo: () => cy.get('input#photo'),
@@ -13,30 +13,19 @@ class buspage {
         model: () => cy.get('input#model'),
         year: () => cy.get('input#year'),
         licenseexpiry: () => cy.get('input#licenseExpiryDate'),
-        nextmontharrow:()=> cy.get('div[class*="open"]>div[class="flatpickr-months"]>span[class*="flatpickr-next-month"]'),
+        nextmontharrow: () => cy.get('div[class*="open"]>div[class="flatpickr-months"]>span[class*="flatpickr-next-month"]'),
         save: () => cy.get('button[type="submit"]'),
-        vehicleidlabel:()=> cy.get('div.showInfoView-inner>div:first-of-type>p')
+        vehicleidlabel: () => cy.get('div.showInfoView-inner>div:first-of-type>p'),
+
+        addnewbusbreadcrumb: () => cy.get('nav.breadcrumbs__BreadcrumbsContainer-l5j25e-0>ul>li:nth-of-type(2)'),
+        addnewbustitle: () => cy.get('section.action-header__HeaderWrapper-q7dhgh-0 > h1')
     }
 
-    
-
-    clickaddnewbus() {
-        cy.waitUntil(() => this.elements.addnewbus().should('be.visible'),{
-            errorMsg:'Bus page is still loading... not able to view the add new bus button',
-            timeout:configData.timeout,
-            interval:configData.intervaltimeout
-        });
-
-        this.elements.addnewbus().click();
+    getAddNewBusTitle() {
+        return this.elements.addnewbusbreadcrumb().invoke('text');
     }
 
     inputvehicleid(id) {
-        cy.waitUntil(()=> this.elements.vehicleid().should('be.visible'),{
-            errorMsg:'Bus form is still loading.... not able to view the vehicle id input field',
-            timeout:configData.timeout,
-            interval:configData.intervaltimeout
-        });
-
         this.elements.vehicleid().type(id);
     }
 
@@ -62,17 +51,11 @@ class buspage {
 
     clicksave() {
         this.elements.save().click();
-
-        cy.waitUntil(() => this.elements.vehicleidlabel().should('be.visible'),{
-            errorMsg:'Bus saving form is still saving... not able to view the vehicleid label',
-            timeout:configData.timeout,
-            interval:configData.intervaltimeout
-        });
     }
 
 
     //add bus form filling
-    fillAddBusForm(addBusData){
+    fillAddBusForm(addBusData) {
         this.inputvehicleid(Utilities.generateVehicleId());
         this.inputseats(addBusData.numberofseats);
         this.inputphoto(addBusData.photolink);
@@ -80,6 +63,6 @@ class buspage {
         this.inputmodel(addBusData.modelnumber);
         this.inputyear(addBusData.year);
         this.clicksave();
-        }
+    }
 }
-module.exports = new buspage();
+module.exports = new addbuspage();

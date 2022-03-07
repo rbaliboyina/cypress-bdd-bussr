@@ -4,7 +4,6 @@ import { When, Given, And, Then } from "cypress-cucumber-preprocessor/steps";
 import registrationPage from '../../../../../page-object-model/fleet-admin/registration_page';
 import overviewPage from '../../../../../page-object-model/fleet-admin/overviewpage';
 import configData from '../../../../../fixtures/config.json';
-import utilities from '../../../../../utilities/Utilities';
 import Utilities from "../../../../../utilities/Utilities";
 
 Given(/^user navigates to Signup page$/, () => {
@@ -12,7 +11,7 @@ Given(/^user navigates to Signup page$/, () => {
 })
 
 When(/^user enter valid email on Email Address field$/, () => {
-    registrationPage.typeEmailAddressWithTabAction(utilities.generateEmail());
+    registrationPage.typeEmailAddressWithTabAction(Utilities.generateEmail());
 })
 
 When(/^user enter (.*) on Email Address field$/, (email) => {

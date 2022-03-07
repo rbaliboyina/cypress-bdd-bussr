@@ -13,12 +13,28 @@ class Utilities {
     // countries = ['Philippines', 'Indonesia', 'Singapore', 'Malaysia', 'UAE', 'India'];
     countries = ['Philippines', 'Indonesia'];
 
+    colors = ['VIOLET', 'BLUE', 'RED', 'GREEN', 'YELLOW', 'WHITE', 'PURPLE', 'BLACK', 'DARKRED'];
+
+    busmodels = ['ACE Cougar', 'AEC Q-type', 'AEC Regal VI', 'AEC Regent II', 'AEC Regent III', 'AEC Regent V', 'AEC Reliance', 'AEC Routemaster', 'AEC Swift', 'Alexander ALX100', 'Alexander ALX200'];
+
     //required for date utilities
     months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
 
     getRandomCharFromString(str) {
         return str.charAt(Math.floor(Math.random() * str.length));
+    }
+
+    generateColors() {
+        var color = ''
+        color = this.colors[Math.floor(Math.random() * this.colors.length)];
+        return color;
+    }
+
+    generateBusModels() {
+        var model = ''
+        model = this.busmodels[Math.floor(Math.random() * this.busmodels.length)]
+        return model;
     }
 
     getCountries() {
@@ -33,11 +49,22 @@ class Utilities {
         for (var i = 0; i < 11; i++) {
             email = email + this.getRandomCharFromString(str);
         }
-        return email + '@gmail.com'
+        return email + this.getRandomInt(1, 1000) + '@gmail.com';
+    }
+
+    getRandomInt(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+
+        return Math.floor(Math.random() * (max - min) + min).toString();
+    }
+
+    generateYear() {
+        return this.getRandomInt(1990, new Date().getFullYear());
     }
 
     generateTravelsName() {
-        let travelName='';
+        let travelName = '';
         travelName = this.getRandomCharFromString(this.allowed.lowers);
         travelName = travelName + this.getRandomCharFromString(this.allowed.uppers);
         travelName = travelName + this.getRandomCharFromString(this.allowed.lowers);
@@ -49,21 +76,28 @@ class Utilities {
     }
 
     generateVehicleId() {
-        var vehicleID=''
+        var vehicleID = ''
         vehicleID = vehicleID + this.getRandomCharFromString(this.allowed.uppers);
         vehicleID = vehicleID + this.getRandomCharFromString(this.allowed.uppers);
         for (var i = 0; i <= 1; i++) {
             vehicleID = vehicleID + this.getRandomCharFromString(this.allowed.numbers);
         }
         vehicleID = vehicleID + this.getRandomCharFromString(this.allowed.uppers);
+
+        vehicleID = vehicleID + this.getRandomInt(1, 1000);
+
         for (var i = 0; i <= 3; i++) {
             vehicleID = vehicleID + this.getRandomCharFromString(this.allowed.numbers);
         }
         return vehicleID;
     }
 
+    generateSeats() {
+        return this.getRandomInt(10, 30);
+    }
+
     generateOperatorId() {
-        var operatorID=''
+        var operatorID = ''
         operatorID = operatorID + this.getRandomCharFromString(this.allowed.lowers);
         operatorID = operatorID + this.getRandomCharFromString(this.allowed.lowers);
         for (var i = 0; i <= 3; i++) {
@@ -73,7 +107,7 @@ class Utilities {
     }
 
     generateName() {
-        var name="";
+        var name = "";
         for (var i = 0; i < 10; i++) {
             name = name + this.getRandomCharFromString(this.allowed.lowers);
         }
@@ -81,7 +115,7 @@ class Utilities {
     }
 
     generatePhoneNumber() {
-        var phoneNumber="";
+        var phoneNumber = "";
         for (var i = 1; i <= 9; i++) {
             phoneNumber = phoneNumber + this.getRandomCharFromString(this.allowed.numbers);
         }
@@ -89,7 +123,7 @@ class Utilities {
     }
 
     generatePassword() {
-        let pwd="";
+        let pwd = "";
 
         pwd = this.getRandomCharFromString(this.allowed.uppers);
         pwd = pwd + this.getRandomCharFromString(this.allowed.lowers);

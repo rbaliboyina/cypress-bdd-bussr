@@ -1,7 +1,7 @@
 {
     "timeout":20000,
     "intervaltimeout":4000,
-    "actionstimeout":1000,
+    "actionstimeout":10000,
     "bussr_url":"buss.com",
     "bussr_reg_url":"https://qa-operator.bussr.app/signup",
     "fleet_login_url":"https://qa-operator.bussr.app/TOURTRAVELS/login",

@@ -1,9 +1,6 @@
-///<reference types="Cypress" />
+///<reference types="cypress" />
 
-import 'cypress-wait-until';
 import Utilities from '../../utilities/Utilities';
-const configData = require('../../fixtures/config.json');
-
 
 class addDriverPage {
     elements = {
@@ -20,7 +17,17 @@ class addDriverPage {
         licenseno: () => cy.get('#licenceNo'),
         licenseExpiry: () => cy.get('#licenseDate'),
         photo: () => cy.get('#photo'),
-        save: () => cy.get('.btn-text')
+        save: () => cy.get('.btn-text'),
+        emailErrorMsg: () => cy.get('.is-danger'),
+        backButton: () => cy.get('.icomoon-pagination-left')
+    }
+
+    clickOnBackButton() {
+        this.elements.backButton().click();
+    }
+
+    getEmailErrorMessage() {
+        return this.elements.emailErrorMsg().invoke('text');
     }
 
     isDownloadButtonVisible() {

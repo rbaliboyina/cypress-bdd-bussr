@@ -111,11 +111,3 @@ Feature: User management related test cases under fleet admin portal
         Then user should able to view Filter popup
 
 
-
-
-
-
-
-
-
-

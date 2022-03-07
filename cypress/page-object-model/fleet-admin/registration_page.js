@@ -100,8 +100,7 @@ class registrationPage {
     countryVisible() {
         this.elements.country().wait(configData.intervaltimeout).should('be.visible')
     }
-
-
+    
     clickStartNowButton() {
         this.elements.startNowButton().click();
     }
