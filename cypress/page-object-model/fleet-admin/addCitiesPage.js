@@ -1,62 +1,47 @@
 ///<reference types="Cypress" />
 
-import 'cypress-wait-until';
-const configData = require('../../fixtures/config.json');
-
 class addCitiesPage {
     elements = {
-        addNewCity: () => cy.get('#app > section > section > div > section:first-of-type > section:first-of-type > div > a:first-of-type > div'),
-        cityName: () => cy.get('#name'),
-        timeZone: () => cy.get('#app > section > section > div > section > section:nth-of-type(2) > form > div:nth-of-type(2) > div > div > div > div:first-of-type > div:first-of-type'),
-        timeZoneInput: () => cy.get('input[id*=react-select]'),
-        timeZoneFirstEle: () => cy.get('#app > section > section > div > section > section:nth-of-type(2) > form > div:nth-of-type(2) > div > div > div + div'),
-        save: () => cy.get('#app > section > section > div > section > section:nth-of-type(2) > form > button > span'),
-        citynamelable:()=> cy.get('div.cityInfo__fields:first-of-type>p:first-of-type')
+        addnewcitybreadcrumb: () => cy.get('li.is-active > a:first-of-type'),
+        addnewcityheader: () => cy.get('section.action-header__HeaderWrapper-q7dhgh-0 > h1'),
+        cityname: () => cy.get('#name'),
+        timezone: () => cy.get('section.wrapper-box__StyledWrapperBox-sc-11k69cb-0 > form >div:nth-of-type(2)>div.control>div>div>div:first-of-type'),
+        saveButton: () => cy.get('span.btn-text')
     }
 
-    clickAddNewCity() {
-        cy.waitUntil(()=> this.elements.addNewCity().should('be.visible'),{
-            errorMsg:'Cities page is still loading.. not able to view the add new city button',
-            timeout:configData.timeout,
-            intervaltimeout:configData.intervaltimeout
-        });
-        
-        this.elements.addNewCity().click();
+    clickSaveButton(){
+        this.elements.saveButton().click();
     }
 
-    typeCityName(value) {
-        cy.waitUntil(()=> this.elements.cityName().should('be.visible'),{
-            errorMsg:'Cities form is still loading.. not able to view the cityname',
-            timeout:configData.timeout,
-            intervaltimeout:configData.intervaltimeout
-        });
-        
-        this.elements.cityName().type(value);
+    selectTimezone() {
+        this.elements.timezone().click().type('{downArrow}{enter}');
     }
 
-    clickTimeZone() {
-        this.elements.timeZone().click();
+    typeCityName(cityname) {
+        this.elements.cityname().type(cityname)
     }
 
-    selectTimeZone(value) {
-        this.elements.timeZoneInput().type(value).wait(configData.intervaltimeout).type('{enter}');
+    getAddNewCityBreadCrumbText() {
+        return this.elements.addnewcitybreadcrumb().invoke('text');
     }
 
-    clickSave() {
-        this.elements.save().click();
+    isAddNewCityHeaderVisible() {
+        this.elements.addnewcityheader().should('be.visible');
+    }
 
-        cy.waitUntil(()=> this.elements.citynamelable().should('be.visible'),{
-            errorMsg:'Saving cities form is still loading.. not able to view the cityname label',
-            timeout:configData.timeout,
-            intervaltimeout:configData.intervaltimeout
-        });
+    isCityNameVisible() {
+        this.elements.cityname().should('be.visible');
+    }
+
+    isTimeZoneVisible() {
+        this.elements.timezone().should('be.visible');
+    }
+
+    isSaveButtonVisible() {
+        this.elements.saveButton().should('be.visible');
     }
 
     fillAddCitiesForm(addCitiesData) {
-        this.typeCityName(addCitiesData.cityname);
-        // this.clickTimeZone();
-        this.selectTimeZone(addCitiesData.timezone);
-        this.clickSave();
     }
 }
 module.exports = new addCitiesPage();

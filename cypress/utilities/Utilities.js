@@ -1,12 +1,10 @@
-const { phone, vehicle } = require("faker");
-
 class Utilities {
     //password creation criteria
     allowed = {
         uppers: "QWERTYUIOPASDFGHJKLZXCVBNM",
         lowers: "qwertyuiopasdfghjklzxcvbnm",
         numbers: "1234567890",
-        symbols: "!@$%&*"
+        symbols: "!@%#$&"
     }
 
     //countries allowed by the Bussr while signing up the operator

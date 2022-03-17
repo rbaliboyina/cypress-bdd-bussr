@@ -131,7 +131,7 @@ describe('Validate user management', () => {
 
 describe('Validate Save button - with valid data', () => {
   var email = '';
-  When(/^user fill the New User Form with random data and acess level as '(.*)'$/, (accessLevel) => {
+  When(/^user fill the New User Form with random data and acess level as (.*)$/, (accessLevel) => {
     email = addNewUserPage.fillAddNewUserForm(accessLevel)
   })
 
@@ -152,7 +152,11 @@ describe('Validate Save button - with valid data', () => {
   })
 
   And(/^saved user should be displayed$/, () => {
-
+    usermanagementpage.clickFilterIcon();
+    usermanagementpage.typeFilterEmail(email);
+    usermanagementpage.clickFilterApplyChanges();
+    cy.wait(configData.actionstimeout)
+    usermanagementpage.getFirstRowEmailID().should('eq', email);
   })
 })
 
@@ -164,20 +168,22 @@ Then(/^user navigates to User Information page$/, () => {
   userinfopage.getUserInfoLabel().should('eq', 'User Information');
 })
 
-And(/^user able to view Email, Authorization Password, Access Level, Craeted At and Updated At fields$/, () => {
+And(/^user able to view Email, Access Level, Mobile Number, isActive, Craeted At and Updated At fields$/, () => {
   userinfopage.eamilLabelIsVisible();
   userinfopage.emailValueIsNonEmpty();
   userinfopage.accessLevelLabelIsVisible();
   userinfopage.accessLevelValueIsNonEmpty();
+  userinfopage.mobileNumberLabelIsVisible();
+  userinfopage.mobileNumberValueIsNonEmpty();
+  userinfopage.isActiveLabelVisible();
+  userinfopage.isActiveValueNonEmpty();
   userinfopage.createdAtLabelIsVisible();
   userinfopage.createdAtValueIsNonEmpty();
-  userinfopage.authPasswordLabelIsVisible();
-  userinfopage.authPasswordValueIsNonEmpty();
   userinfopage.updatedAtLabelIsVisible();
   userinfopage.updatedAtValueIsNonEmpty();
 })
 
-And(/^user click on Edit button$/, () => {
+And(/^user click on Edit button in User Information page$/, () => {
   userinfopage.clickEditButton();
 })
 
@@ -195,7 +201,6 @@ And(/^all the fields should be in Edit mode$/, () => {
   addNewUserPage.isAccessLevelVisible();
   addNewUserPage.isUserNameVisible();
   addNewUserPage.isMobileNumberVisible();
-  addNewUserPage.isOperatorIdVisible();
 })
 
 And(/^user click on Filter Panel hamburger icon$/, () => {
@@ -204,4 +209,16 @@ And(/^user click on Filter Panel hamburger icon$/, () => {
 
 Then(/^user should able to view Filter popup$/, () => {
   usermanagementpage.isFilterEmailVisible();
+})
+
+And(/^user is able to view Active check box field$/, () => {
+  addNewUserPage.isActiveCheckBoxVisible();
+})
+
+And(/^user is able to view License Expiry Date field$/, () => {
+  addNewUserPage.isLicenseExpiryDateVisible();
+})
+
+And(/^user is able to view License Number field$/, () => {
+  addNewUserPage.isLicenseNumberVisible();
 })

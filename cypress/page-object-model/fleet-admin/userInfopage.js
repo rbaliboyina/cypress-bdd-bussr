@@ -10,13 +10,31 @@ class userinfopage {
         emailLabel: () => cy.get('.schedule__left>div:nth-of-type(1)>p:nth-of-type(1)'),
         accessLevelLabel: () => cy.get('.schedule__left>div:nth-of-type(2)>p:nth-of-type(1)'),
         accessLevelValue: () => cy.get('.schedule__left>div:nth-of-type(2)>p:nth-of-type(2)'),
-        createdAtLabel: () => cy.get('.schedule__left>div:nth-of-type(3)>p:nth-of-type(1)'),
-        createdAtValue: () => cy.get('.schedule__left>div:nth-of-type(3)>p:nth-of-type(2)'),
-        authPasswordLabel: () => cy.get('.schedule__right>div:nth-of-type(1)>p:nth-of-type(1)'),
-        authPasswordValue: () => cy.get('.schedule__right>div:nth-of-type(1)>p:nth-of-type(2)'),
-        updatedAtLabel: () => cy.get('.schedule__right>div:nth-of-type(3)>p:nth-of-type(1)'),
-        updatedAtValue: () => cy.get('.schedule__right>div:nth-of-type(3)>p:nth-of-type(1)')
-        
+        mobileNumberLabel: () => cy.get('.schedule__left>div:nth-of-type(3)>p:nth-of-type(1)'),
+        mobileNumberValue: () => cy.get('.schedule__left>div:nth-of-type(3)>p:nth-of-type(2)'),
+        isActiveLabel: () => cy.get('.schedule__left>div:nth-of-type(4)>p:nth-of-type(1)'),
+        isActiveValue: () => cy.get('.schedule__left>div:nth-of-type(4)>p:nth-of-type(2)'),
+        createdAtLabel: () => cy.get('.schedule__right>div:nth-of-type(1)>p:nth-of-type(1)'),
+        createdAtValue: () => cy.get('.schedule__right>div:nth-of-type(1)>p:nth-of-type(2)'),
+        updatedAtLabel: () => cy.get('.schedule__right>div:nth-of-type(2)>p:nth-of-type(1)'),
+        updatedAtValue: () => cy.get('.schedule__right>div:nth-of-type(2)>p:nth-of-type(2)')
+
+    }
+
+    isActiveValueNonEmpty(){
+        this.elements.isActiveValue().should('not.be.empty');
+    }
+
+    isActiveLabelVisible(){
+        this.elements.isActiveLabel().should('be.visible');
+    }
+
+    mobileNumberValueIsNonEmpty() {
+        this.elements.mobileNumberValue().should('not.be.empty');
+    }
+
+    mobileNumberLabelIsVisible() {
+        this.elements.mobileNumberLabel().should('be.visible');
     }
 
     updatedAtLabelIsVisible() {

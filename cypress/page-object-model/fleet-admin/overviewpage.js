@@ -10,7 +10,7 @@ class overview {
         drivers: () => cy.xpath('//a[text()="Drivers"]'),
         buses: () => cy.xpath('//a[text()="Buses"]'),
         cities: () => cy.xpath('//a[text()="Cities"]'),
-        stops: () => cy.xpath('//a[text()="Stops"]'),
+        stops: () => cy.xpath('//a[text()="Stop"]'),
         routes: () => cy.xpath('//a[text()="Routes"]'),
         routeschedules: () => cy.xpath('//a[text()="Route Schedules"]'),
         trips: () => cy.xpath('//a[text()="Trips"]'),

@@ -8,12 +8,31 @@ class addNewUser {
         emailAddress: () => cy.get('#email'),
         authPassword: () => cy.get('#password'),
         accessLevel: () => cy.get('div.css-g1d714-ValueContainer'),
-        userName: () => cy.get('#userName'),
-        mobileNumber: () => cy.get('#mobileNumber'),
+        userName: () => cy.get('#displayName'),
+        mobileNumber: () => cy.get('#phoneNumber'),
         operatorId: () => cy.get('#operatorId'),
         saveButton: () => cy.get('button.is-primary > span'),
         errormessages: () => cy.get('div.help.is-danger'),
         backbutton: () => cy.get('i.icomoon-pagination-left'),
+        licenseexpirydate: () => cy.get('input#licenseExpiryDate'),
+        licensenumber: () => cy.get('input#licenseNumber'),
+        activeCheckbox: () => cy.get('input#active[id="active"].checkbox[type="checkbox"]')
+    }
+
+    isActiveCheckBoxVisible() {
+        this.elements.activeCheckbox().should('be.visible');
+    }
+
+    isLicenseNumberVisible() {
+        this.elements.licensenumber().should('be.visible');
+    }
+
+    isLicenseExpiryDateVisible() {
+        this.elements.licenseexpirydate().should('be.visible');
+    }
+
+    clickActiveCheckBox() {
+        this.elements.activeCheckbox().click();
     }
 
     fillAddNewUserForm(accesslevel) {
@@ -22,8 +41,8 @@ class addNewUser {
         this.typeAuthPassword(Utilities.generatePassword())
         this.typeAccessLevel(accesslevel);
         this.typeUserName(Utilities.generateName());
+        this.clickActiveCheckBox();
         this.typeMobileNumber(Utilities.generatePhoneNumber());
-        this.typeOperatorID(Utilities.generateOperatorId());
         return email;
     }
 
@@ -36,7 +55,7 @@ class addNewUser {
     }
 
     typeAccessLevel(accesslevel) {
-        this.elements.accessLevel().type(accesslevel).type('{enter}', { multiple: true });
+        this.elements.accessLevel().type(accesslevel+'{downArrow}{enter}');
     }
 
     typeUserName(data) {
