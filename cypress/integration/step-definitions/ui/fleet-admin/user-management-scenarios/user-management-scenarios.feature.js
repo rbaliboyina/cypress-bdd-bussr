@@ -2,6 +2,7 @@
 
 import { expect } from "chai";
 import { When, Given, And, Then } from "cypress-cucumber-preprocessor/steps";
+import edituserspage from "../../../../../page-object-model/fleet-admin/edituserspage";
 import addNewUserPage from "../../../../../page-object-model/fleet-admin/addNewUserPage";
 import loginPage from '../../../../../page-object-model/fleet-admin/loginpage'
 import overviewPage from '../../../../../page-object-model/fleet-admin/overviewpage'
@@ -46,7 +47,6 @@ Then(/^user should able to view Drivers under User Administration$/, () => {
 describe('Validate user management', () => {
   Given(/^user click on User Management$/, () => {
     overviewPage.clickusermanagement();
-    cy.waitUntil(() => usermanagementpage.elements.addNewUserButton().should('be.visible'));
   })
 
   Then(/^user able to view respective login details in User Management page$/, () => {
@@ -63,48 +63,58 @@ describe('Validate user management', () => {
     expect(usermanagementpage.getUpdatedAt()).not.to.be.empty;
   })
 
-  And(/^user click on Add New User button$/, () => {
+  And(/^user click on Add New User button in User Management page$/, () => {
     usermanagementpage.clickAddNewUserButton();
   })
 
-  Then(/^user should navigate to Add New User Page$/, () => {
-    addNewUserPage.addNewUserTittleVisible();
+  Then(/^user is able to view Add New User Form$/, () => {
+    addNewUserPage.getAddNewUserLabelText().should('eq', 'Add New User');
   })
 
-  Then(/^user should able to view Add New User heading with back icon$/, () => {
-    addNewUserPage.addNewUserTittleVisible();
+  And(/^user is able to view User Role dropdown field in Add New User form$/, () => {
+    addNewUserPage.isUserRoleVisible();
   })
 
-  And(/^user should able to view Download icon$/, () => {
-    addNewUserPage.isDownloadButtonVisible();
+  And(/^user is able to view Full Name input field in Add New User form$/, () => {
+    addNewUserPage.isFullNameVisible();
   })
 
-  And(/^user is able to view Email Address input field$/, () => {
+  And(/^user is able to view Email Address input field in Add New User form$/, () => {
     addNewUserPage.isEmailAddressVisible();
   })
 
-  And(/^user is able to view Authorization Password input field$/, () => {
+  And(/^user is able to view Auth Password input field in Add New User form$/, () => {
     addNewUserPage.isAuthPasswordVisible();
   })
 
-  And(/^user is able to view Access Level input field$/, () => {
-    addNewUserPage.isAccessLevelVisible();
+  And(/^user is able to view Phone input field in Add New User form$/, () => {
+    addNewUserPage.isPhoneVisible();
   })
 
-  And(/^user is able to view User Name input field$/, () => {
-    addNewUserPage.isUserNameVisible();
+  And(/^user is able to view License No input field in Add New User form$/, () => {
+    addNewUserPage.isLicenseNoVisible();
   })
 
-  And(/^user is able to view Mobile Number input field$/, () => {
-    addNewUserPage.isMobileNumberVisible();
+  And(/^user is able to view License Expire field in Add New User form$/, () => {
+    addNewUserPage.isLicenseExpiryDateVisible();
+  })
+
+  And(/^user is able to view Status with Active and Inactive buttons in Add New User form$/, () => {
+    addNewUserPage.isActiveStatusVisible();
+    addNewUserPage.isInactiveStatusVisible();
+  })
+
+  And(/^user is able to view Cancel and Add User buttons in Add New User form$/, () => {
+    addNewUserPage.isCancelVisible();
+    addNewUserPage.isAddUserVisible();
+  })
+
+  And(/^user click on Cancel button in Add New User Form$/, () => {
+    addNewUserPage.clickOnCancelButton();
   })
 
   And(/^user is able to view Operator ID input field$/, () => {
     addNewUserPage.isOperatorIdVisible();
-  })
-
-  And(/^user is able to view Save button$/, () => {
-    addNewUserPage.isSaveButtonVisible();
   })
 
   And(/^user click on Save button without entering the data$/, () => {
@@ -123,41 +133,38 @@ describe('Validate user management', () => {
     addNewUserPage.clickBackButton();
   })
 
-  Then(/^user should navigate to User management page$/, () => {
+  Then(/^user should land in User Management page$/, () => {
     usermanagementpage.getUserManagementLabel().should('eq', "User Management");
   })
 
 })
 
-describe('Validate Save button - with valid data', () => {
-  var email = '';
-  When(/^user fill the New User Form with random data and acess level as (.*)$/, (accessLevel) => {
-    email = addNewUserPage.fillAddNewUserForm(accessLevel)
-  })
+When(/^user fill the New User Form with random data and User_Role as (.*) (.*)$/, (userrole, status) => {
+  addNewUserPage.fillAddNewUserForm(userrole, status);
+})
 
-  And(/^user click on save button$/, () => {
-    addNewUserPage.clickSaveButton();
-  })
+And(/^user click on save button$/, () => {
+  addNewUserPage.clickSaveButton();
+})
 
-  Then(/^user should able to view given email address in User Info page$/, () => {
-    userinfopage.isEmailMatching(email);
-  })
+Then(/^user should able to view given email address in User Info page$/, () => {
+  userinfopage.isEmailMatching(email);
+})
 
-  And(/^user should able to view Edit button$/, () => {
-    userinfopage.isEditButtonVisible();
-  })
+And(/^user should able to view Edit button$/, () => {
+  userinfopage.isEditButtonVisible();
+})
 
-  When(/^user click on back button in User Info page$/, () => {
-    userinfopage.clickBackArrowButton();
-  })
+When(/^user click on back button in User Info page$/, () => {
+  userinfopage.clickBackArrowButton();
+})
 
-  And(/^saved user should be displayed$/, () => {
-    usermanagementpage.clickFilterIcon();
-    usermanagementpage.typeFilterEmail(email);
-    usermanagementpage.clickFilterApplyChanges();
-    cy.wait(configData.actionstimeout)
-    usermanagementpage.getFirstRowEmailID().should('eq', email);
-  })
+And(/^saved user should be displayed$/, () => {
+  usermanagementpage.clickFilterIcon();
+  usermanagementpage.typeFilterEmail(email);
+  usermanagementpage.clickFilterApplyChanges();
+  cy.wait(configData.actionstimeout)
+  usermanagementpage.getFirstRowEmailID().should('eq', email);
 })
 
 And(/^user click on User Information link by clicking on ...$/, () => {
@@ -211,14 +218,49 @@ Then(/^user should able to view Filter popup$/, () => {
   usermanagementpage.isFilterEmailVisible();
 })
 
-And(/^user is able to view Active check box field$/, () => {
-  addNewUserPage.isActiveCheckBoxVisible();
+And(/^user click on Add User button in Add New User Form$/, () => {
+  addNewUserPage.clickOnAddUserButton();
 })
 
-And(/^user is able to view License Expiry Date field$/, () => {
-  addNewUserPage.isLicenseExpiryDateVisible();
+And(/^user click on first element of the user in User Management page$/, () => {
+  usermanagementpage.clickOnFirstUser();
 })
 
-And(/^user is able to view License Number field$/, () => {
-  addNewUserPage.isLicenseNumberVisible();
+Then(/^user info popup should open in the user Management page$/, () => {
+  userinfopage.getUserInfoLabel().should('eq', 'User Info');
+})
+
+And(/^user should able to view Edit button in User Info popup$/, () => {
+  userinfopage.isEditButtonVisible();
+})
+
+And(/^user able to view Create On, Last Updated on, Phone, License No, Email, License Expire fields in User Info popup$/, () => {
+  userinfopage.isCloseButtonVisible();
+  userinfopage.isCreateOnVisible();
+  userinfopage.isLastUpdateOnVisible();
+  userinfopage.isPhoneVisible();
+  userinfopage.isLicenseNoVisible();
+  userinfopage.isEmailVisible();
+  userinfopage.isLicenseExpireVisible();
+})
+
+And(/^user click on close button in User Info popup in User Management page$/, () => {
+  userinfopage.clickOnCloseButton();
+})
+
+Then(/^user info popup should close in User Management page$/, () => {
+  userinfopage.userInfoLabelShouldNotExist();
+  userinfopage.editButtonShouldNotExist();
+})
+
+And(/^user click on Edit button in User Info popup$/, () => {
+  userinfopage.clickOnEditButton();
+})
+
+And(/^user should able to view Update button$/, () => {
+  edituserspage.isUpdateButtonVisible();
+})
+
+And(/^user should able to view Edit popup window$/, () => {
+  edituserspage.getPopupLabelText().should('eq', 'Edit User Data');
 })

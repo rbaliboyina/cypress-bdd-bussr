@@ -3,94 +3,63 @@ const configData = require('../../fixtures/config.json');
 
 class userinfopage {
     elements = {
-        userinfolabel: () => cy.get('h1.action-header__HeaderTitle-q7dhgh-3.level-left.ihyYwQ'),
-        editButton: () => cy.get('div.action-header__HeaderButtons-q7dhgh-4>a.button.is-primary'),
-        backarrow: () => cy.get('a.action-header__BackBtn-q7dhgh-2>i'),
-        emailValue: () => cy.get('.schedule__left>div:nth-of-type(1)>p:nth-of-type(2)'),
-        emailLabel: () => cy.get('.schedule__left>div:nth-of-type(1)>p:nth-of-type(1)'),
-        accessLevelLabel: () => cy.get('.schedule__left>div:nth-of-type(2)>p:nth-of-type(1)'),
-        accessLevelValue: () => cy.get('.schedule__left>div:nth-of-type(2)>p:nth-of-type(2)'),
-        mobileNumberLabel: () => cy.get('.schedule__left>div:nth-of-type(3)>p:nth-of-type(1)'),
-        mobileNumberValue: () => cy.get('.schedule__left>div:nth-of-type(3)>p:nth-of-type(2)'),
-        isActiveLabel: () => cy.get('.schedule__left>div:nth-of-type(4)>p:nth-of-type(1)'),
-        isActiveValue: () => cy.get('.schedule__left>div:nth-of-type(4)>p:nth-of-type(2)'),
-        createdAtLabel: () => cy.get('.schedule__right>div:nth-of-type(1)>p:nth-of-type(1)'),
-        createdAtValue: () => cy.get('.schedule__right>div:nth-of-type(1)>p:nth-of-type(2)'),
-        updatedAtLabel: () => cy.get('.schedule__right>div:nth-of-type(2)>p:nth-of-type(1)'),
-        updatedAtValue: () => cy.get('.schedule__right>div:nth-of-type(2)>p:nth-of-type(2)')
-
+        userinfolabel: () => cy.get('div.cardSection_card__section__right__1wNWs > div > div:nth-of-type(1)>p:nth-of-type(1)'),
+        close: () => cy.get('div.cardSection_card__section__right__1wNWs > div > div:nth-of-type(1)>p:nth-of-type(2)'),
+        createOn: () => cy.get('div.cardSection_card__section__right__1wNWs > div > div:nth-of-type(5)>div:nth-of-type(1)'),
+        lastUpdatedOn: () => cy.get('div.cardSection_card__section__right__1wNWs > div > div:nth-of-type(5)>div:nth-of-type(2)'),
+        phone: () => cy.get('div.cardSection_card__section__right__1wNWs > div > div:nth-of-type(6)>div:nth-of-type(1)>div:nth-of-type(1)'),
+        licenseno: () => cy.get('div.cardSection_card__section__right__1wNWs > div > div:nth-of-type(6)>div:nth-of-type(1)>div:nth-of-type(2)'),
+        email: () => cy.get('div.cardSection_card__section__right__1wNWs > div > div:nth-of-type(6)>div:nth-of-type(2)>div:nth-of-type(1)'),
+        licenseExpire: () => cy.get('div.cardSection_card__section__right__1wNWs > div > div:nth-of-type(6)>div:nth-of-type(2)>div:nth-of-type(2)'),
+        editButton: () => cy.get('div.userInfo_user__info__footer__U73jk button')
     }
 
-    isActiveValueNonEmpty(){
-        this.elements.isActiveValue().should('not.be.empty');
+    clickOnEditButton() {
+        this.elements.editButton().scrollIntoView().click();
     }
 
-    isActiveLabelVisible(){
-        this.elements.isActiveLabel().should('be.visible');
+    editButtonShouldNotExist() {
+        this.elements.editButton().should('not.exist');
     }
 
-    mobileNumberValueIsNonEmpty() {
-        this.elements.mobileNumberValue().should('not.be.empty');
+    userInfoLabelShouldNotExist() {
+        this.elements.userinfolabel().should('not.exist');
     }
 
-    mobileNumberLabelIsVisible() {
-        this.elements.mobileNumberLabel().should('be.visible');
-    }
-
-    updatedAtLabelIsVisible() {
-        this.elements.updatedAtLabel().should('be.visible')
-    }
-
-    updatedAtValueIsNonEmpty() {
-        this.elements.updatedAtValue().should('not.be.empty')
-    }
-
-    authPasswordLabelIsVisible() {
-        this.elements.authPasswordLabel().should('be.visible')
-    }
-
-    authPasswordValueIsNonEmpty() {
-        this.elements.authPasswordValue().should('not.be.empty')
-    }
-
-    createdAtLabelIsVisible() {
-        this.elements.createdAtLabel().should('be.visible')
-    }
-
-    createdAtValueIsNonEmpty() {
-        this.elements.createdAtValue().should('not.be.empty')
-    }
-
-    accessLevelLabelIsVisible() {
-        this.elements.accessLevelLabel().should('be.visible')
-    }
-
-    accessLevelValueIsNonEmpty() {
-        this.elements.accessLevelValue().should('not.be.empty')
-    }
-
-    eamilLabelIsVisible() {
-        this.elements.emailLabel().should('be.visible');
-    }
-
-    emailValueIsNonEmpty() {
-        this.elements.emailValue().should('not.be.empty');
-    }
-
-    isEmailMatching(email) {
-        this.elements.emailValue().invoke('text').should('eq', email);
+    clickOnCloseButton() {
+        this.elements.close().click();
     }
 
     isEditButtonVisible() {
-        this.elements.editButton().focus().should('be.visible');
+        this.elements.editButton().should('be.visible');
     }
 
-    clickEditButton() {
-        this.elements.editButton().click();
+    isLicenseExpireVisible() {
+        this.elements.licenseExpire().should('be.visible');
     }
 
-    clickBackArrowButton() {
-        this.elements.backarrow().click();
+    isEmailVisible() {
+        this.elements.email().should('be.visible');
+    }
+
+    isLicenseNoVisible() {
+        this.elements.licenseno().should('be.visible');
+    }
+
+    isPhoneVisible() {
+        this.elements.phone().should('be.visible');
+    }
+
+    isLastUpdateOnVisible() {
+        this.elements.lastUpdatedOn().should('be.visible');
+    }
+
+    isCreateOnVisible() {
+        this.elements.createOn().should('be.visible');
+    }
+
+    isCloseButtonVisible() {
+        this.elements.close().should('be.visible');
     }
 
     getUserInfoLabel() {

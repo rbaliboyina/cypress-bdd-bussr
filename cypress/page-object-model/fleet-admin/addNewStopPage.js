@@ -1,6 +1,8 @@
 /// <reference types="Cypress"/>
 
-class addnewstoppage {
+import config from "../../fixtures/config.json";
+
+class addNewStopPage {
     elements = {
         addnewstopbreadcrumb: () => cy.get('.is-active'),
         addnewstopheader: () => cy.get('h1.action-header__HeaderTitle-q7dhgh-3'),
@@ -10,12 +12,42 @@ class addnewstoppage {
         activeStatus: () => cy.get('#Active'),
         stopssearch: () => cy.get('#search'),
         area: () => cy.get('#area'),
-        cityname: () => cy.get('div.css-b8ldur-Input'),
+        cityname: () => cy.get('div.css-yk16xz-control'),
         address: () => cy.get('#address'),
         landmark: () => cy.get('#hint'),
         cityCode: () => cy.get('#cityCode'),
         terminalCode: () => cy.get('#terminalCode'),
         saveButton: () => cy.get('button.is-primary')
+    }
+
+    clickSaveButton() {
+        this.elements.saveButton().click();
+    }
+
+    typeCityCode(data) {
+        this.elements.cityCode().type(data);
+    }
+
+    typeLandmark(data) {
+        this.elements.landmark().focus().type(data);
+    }
+
+    typeCityName(data) {
+        this.elements.cityname().type(data+'{enter}');
+    }
+
+    typeStop(data) {
+        this.elements.stopssearch().type(data).wait(config.actionstimeout).type('{downArrow}').tab();
+    }
+
+    selectStatus(data) {
+        if ("Active" == data) {
+            this.elements.activeStatus().click();
+        }
+    }
+
+    typeStopName(data) {
+        this.elements.stopname().type(data);
     }
 
     getAddNewStopBreadCrumb() {
@@ -30,4 +62,4 @@ class addnewstoppage {
         this.elements.downloadIcon().should('be.visible');
     }
 }
-module.exports = new addnewstoppage();
+module.exports = new addNewStopPage();

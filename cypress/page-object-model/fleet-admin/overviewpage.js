@@ -35,13 +35,12 @@ class overview {
 
     isDriversVisible() {
         this.elements.drivers().should('be.visible');
-        return this.elements.drivers();
     }
 
     isOverviewLabelVisible() {
-        this.elements.overview().should('be.visible');
+        cy.intercept('https://qa-operator.bussr.app/*/overview');
 
-        return this.elements.overview();
+        this.elements.overview().should('be.visible');
     }
 
     isUserManagementVisible() {

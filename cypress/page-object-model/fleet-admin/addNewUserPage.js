@@ -3,123 +3,97 @@ import Utilities from '../../utilities/Utilities';
 
 class addNewUser {
     elements = {
-        addNewUserLabel: () => cy.get('h1.action-header__HeaderTitle-q7dhgh-3'),
-        downloadButton: () => cy.get('div.action-header__HeaderButtons-q7dhgh-4>a>svg'),
-        emailAddress: () => cy.get('#email'),
-        authPassword: () => cy.get('#password'),
-        accessLevel: () => cy.get('div.css-g1d714-ValueContainer'),
-        userName: () => cy.get('#displayName'),
-        mobileNumber: () => cy.get('#phoneNumber'),
-        operatorId: () => cy.get('#operatorId'),
-        saveButton: () => cy.get('button.is-primary > span'),
-        errormessages: () => cy.get('div.help.is-danger'),
-        backbutton: () => cy.get('i.icomoon-pagination-left'),
-        licenseexpirydate: () => cy.get('input#licenseExpiryDate'),
-        licensenumber: () => cy.get('input#licenseNumber'),
-        activeCheckbox: () => cy.get('input#active[id="active"].checkbox[type="checkbox"]')
+        //addNewUserLabel: () => cy.get('h1.action-header__HeaderTitle-q7dhgh-3'),,
+        addNewUserLabel: () => cy.get('div.modal--title'),
+        //downloadButton: () => cy.get('div.action-header__HeaderButtons-q7dhgh-4>a>svg'),
+        userRole: () => cy.get('select#userRole'),
+        fullName: () => cy.get('input[name=name]'),
+        emailAddress: () => cy.get('input[name=email]'),
+        authPassword: () => cy.get('input[name=password]'),
+        phone: () => cy.get('input[name=phone]'),
+        licenseNo: () => cy.get('input[name=licence]'),
+        licenseExpiry: () => cy.get('input[name=licenceExpiry]'),
+        statusActive: () => cy.get('input[value=true]'),
+        statusInactive: () => cy.get('input[value=false]'),
+        cancel: () => cy.get('div.modal--form--footer button:nth-of-type(1)'),
+        addUser: () => cy.get('button[type=submit]')
     }
 
-    isActiveCheckBoxVisible() {
-        this.elements.activeCheckbox().should('be.visible');
+    clickOnAddUserButton() {
+        this.elements.addUser().click();
     }
 
-    isLicenseNumberVisible() {
-        this.elements.licensenumber().should('be.visible');
-    }
-
-    isLicenseExpiryDateVisible() {
-        this.elements.licenseexpirydate().should('be.visible');
-    }
-
-    clickActiveCheckBox() {
-        this.elements.activeCheckbox().click();
-    }
-
-    fillAddNewUserForm(accesslevel) {
-        var email = Utilities.generateEmail();
-        this.typeEmailAddress(email)
-        this.typeAuthPassword(Utilities.generatePassword())
-        this.typeAccessLevel(accesslevel);
-        this.typeUserName(Utilities.generateName());
-        this.clickActiveCheckBox();
-        this.typeMobileNumber(Utilities.generatePhoneNumber());
-        return email;
-    }
-
-    typeEmailAddress(email) {
-        this.elements.emailAddress().type(email);
-    }
-
-    typeAuthPassword(pwd) {
-        this.elements.authPassword().type(pwd);
-    }
-
-    typeAccessLevel(accesslevel) {
-        this.elements.accessLevel().type(accesslevel+'{downArrow}{enter}');
-    }
-
-    typeUserName(data) {
-        this.elements.userName().type(data);
-    }
-
-    typeMobileNumber(data) {
-        this.elements.mobileNumber().type(data);
-    }
-
-    typeOperatorID(data) {
-        this.elements.operatorId().type(data);
-    }
-
-    clickBackButton() {
-        this.elements.backbutton().click();
-    }
-
-    addNewUserTittleVisible() {
-        this.elements.addNewUserLabel().should('be.visible');
-    }
-
-    isDownloadButtonVisible() {
-        this.elements.downloadButton().should('be.visible');
-    }
-
-    isEmailAddressVisible() {
-        this.elements.emailAddress().should('be.visible');
+    isPhoneVisible() {
+        this.elements.phone().should('be.visible');
     }
 
     isAuthPasswordVisible() {
         this.elements.authPassword().should('be.visible');
     }
 
-    isAccessLevelVisible() {
-        this.elements.accessLevel().should('be.visible');
+    isEmailAddressVisible() {
+        this.elements.emailAddress().should('be.visible');
     }
 
-    isUserNameVisible() {
-        this.elements.userName().should('be.visible');
+    clickOnCancelButton() {
+        this.elements.cancel().click();
     }
 
-    isMobileNumberVisible() {
-        this.elements.mobileNumber().should('be.visible');
+
+    setStatus(data) {
+        if (!data) {
+            this.elements.statusInactive().click();
+        }
     }
 
-    isOperatorIdVisible() {
-        this.elements.operatorId().should('be.visible');
+    isAddUserVisible() {
+        this.elements.addUser().should('be.visible');
     }
 
-    isSaveButtonVisible() {
-        this.elements.saveButton().should('be.visible')
+    isCancelVisible() {
+        this.elements.cancel().should('be.visible');
     }
 
-    clickSaveButton() {
-        this.elements.saveButton().click();
+    isInactiveStatusVisible() {
+        this.elements.statusInactive().should('be.visible');
     }
 
-    errorMessageCount(count) {
-        this.elements.errormessages().should('have.length', count)
+    isActiveStatusVisible() {
+        this.elements.statusActive().should('be.visible');
     }
 
-    errorMessageIsDispalyed(errormsg) {
-        cy.contains(errormsg).should('be.visible');
+    isFullNameVisible() {
+        this.elements.emailAddress().should('be.visible');
+    }
+
+    isUserRoleVisible() {
+        this.elements.userRole().should('be.visible');
+    }
+
+    getAddNewUserLabelText() {
+        return this.elements.addNewUserLabel().invoke('text');
+    }
+
+    isActiveCheckBoxVisible() {
+        this.elements.activeCheckbox().should('be.visible');
+    }
+
+    isLicenseNoVisible() {
+        this.elements.licenseNo().should('be.visible');
+    }
+
+    isLicenseExpiryDateVisible() {
+        this.elements.licenseExpiry().should('be.visible');
+    }
+
+    fillAddNewUserForm(userRole, status) {
+        this.elements.userRole().select(userRole);
+        this.elements.fullName().type(Utilities.generateName());
+        this.elements.emailAddress().type(Utilities.generateEmail());
+        this.elements.authPassword().type(Utilities.generatePassword());
+        this.elements.phone().type(Utilities.generatePhoneNumber());
+        this.elements.licenseNo().type(Utilities.generateLicenseNo());
+        this.setStatus(status);
     }
 }
 module.exports = new addNewUser();

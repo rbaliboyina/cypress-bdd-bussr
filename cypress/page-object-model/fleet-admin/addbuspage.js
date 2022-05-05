@@ -16,7 +16,6 @@ class addbuspage {
         nextmontharrow: () => cy.get('div[class*="open"]>div[class="flatpickr-months"]>span[class*="flatpickr-next-month"]'),
         save: () => cy.get('button[type="submit"]'),
         vehicleidlabel: () => cy.get('div.showInfoView-inner>div:first-of-type>p'),
-
         addnewbusbreadcrumb: () => cy.get('nav.breadcrumbs__BreadcrumbsContainer-l5j25e-0>ul>li:nth-of-type(2)'),
         addnewbustitle: () => cy.get('section.action-header__HeaderWrapper-q7dhgh-0 > h1')
     }

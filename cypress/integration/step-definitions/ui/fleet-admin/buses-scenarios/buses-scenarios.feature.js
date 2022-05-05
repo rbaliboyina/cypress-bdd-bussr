@@ -130,20 +130,16 @@ describe('To verify filter with seats option', () => {
     })
 })
 
-describe('To verify filter with color option', () => {
-    let color = ''
-
-    And(/^user enter color in color filter$/, () => {
-        busespage.elements.firstRowColor().invoke('text').then((data) => {
-            color = data;
-            busespage.filterWithColor(color);
-        })
+let color = ''
+And(/^user enter color in color filter$/, () => {
+    busespage.elements.firstRowColor().invoke('text').then((data) => {
+        color = data;
+        busespage.filterWithColor(color);
     })
+})
 
-    Then(/^color related information should display in Buses page$/, () => {
-        cy.wait(config.timeout)
-        busespage.getFirstRowColor().should('eq', color);
-    })
+Then(/^color related information should display in Buses page$/, () => {
+    busespage.getFirstRowColor().should('eq', color);
 })
 
 describe('To verify filter with model option', () => {

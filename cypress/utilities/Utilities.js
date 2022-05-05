@@ -50,6 +50,15 @@ class Utilities {
         return email + this.getRandomInt(1, 1000) + '@gmail.com';
     }
 
+    generateLicenseNo() {
+        var licno = '';
+        var str = this.allowed.uppers + this.allowed.numbers;
+        for (var i = 0; i < 5; i++) {
+            licno = licno + this.getRandomCharFromString(str);
+        }
+        return licno;
+    }
+
     getRandomInt(min, max) {
         min = Math.ceil(min);
         max = Math.floor(max);

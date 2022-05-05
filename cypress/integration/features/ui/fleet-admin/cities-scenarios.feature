@@ -31,6 +31,7 @@ Feature: Cities related test cases under fleet admin portal
         Examples:
             | cityname   |
             | Banagalore |
+            | Hyderabad  |
 
     @regression @positive
     Scenario: To verify edit option

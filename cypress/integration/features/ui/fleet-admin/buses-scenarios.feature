@@ -102,9 +102,7 @@ Feature: Buses related test cases under fleet admin portal
         And user enter year in year filter
         And user click on Applychanges button on filter popup in Buses page
         Then year related information should display in Buses page
-
-
-    @regression @positive
+        
     @regression @positive
     Scenario: To verify with clear filter option
         Given user click on Buses link

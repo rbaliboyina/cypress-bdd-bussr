@@ -6,7 +6,10 @@
   "ng-recaptcha": "^7.0.1",
   "scripts": {
     "test": "test",
-    "cypress:open": "cypress open"
+    "cypress:open": "cypress open",
+    "cypress:build": "npm i",
+    "cypress:smoke:headless":"cypress run --spec cypress//integration//features//ui//fleet-admin//signup-scenarios.feature",
+    "cypress:smoke":"cypress run --spec cypress//integration//features//ui//fleet-admin//signup-scenarios.feature --headed --browser chrome"
   },
   "author": "bussr",
   "license": "ISC",

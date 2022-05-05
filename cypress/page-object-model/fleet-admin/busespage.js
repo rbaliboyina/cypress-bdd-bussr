@@ -37,11 +37,11 @@ class buspage {
     }
 
     filterWithModel(data) {
-        this.elements.filterColor(data);
+        this.elements.filterModel(data);
     }
 
     filterWithColor(data) {
-        this.elements.filterAvailableSeats().type(data);
+        this.elements.filterColor().type(data);
     }
 
     filterWithSeats(data) {
