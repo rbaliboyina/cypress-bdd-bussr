@@ -9,7 +9,7 @@ jobs:
       - name: Cypress.io
         uses: cypress-io/github-action@v2.9.7
         with:
-          run: npm run cypress:smoke:headless
+          start: npm run cypress:smoke:headless
       - name: generate the reports
         run: npm run generate:htmlreport
       - name: copy test report to public folder
