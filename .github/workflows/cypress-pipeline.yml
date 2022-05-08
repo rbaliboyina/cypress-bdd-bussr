@@ -11,6 +11,6 @@ jobs:
       - name: run test scripts
         uses: cypress-io/github-action@v2.9.7
         with:
-          start: npm run cypress:smoke:headless      
+          start: npx cypress run --spec cypress//integration//features//ui//fleet-admin//signup-scenarios.feature
       - name: generate the results
         run: node .//cypress//htmlreport.js
