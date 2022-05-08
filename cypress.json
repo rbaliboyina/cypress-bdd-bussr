@@ -11,5 +11,6 @@
         "overwrite": false,
         "json": true,
         "html": false
-    }
+    },
+    "testFiles": "**/*.feature"
 }

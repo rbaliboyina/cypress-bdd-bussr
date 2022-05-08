@@ -22,11 +22,11 @@ jobs:
       - name: generate the HTML Report
         run: node .//cypress//htmlreport.js
 
-      - name: Copy test execution screenshots and videos
+      - name: copy reports to public folder
         run: |
           mkdir public
-          cp -r cypress/screenshots public/screenshots
-          cp -r cypress/videos public/videos
+          # cp -r cypress/screenshots public/screenshots
+          # cp -r cypress/videos public/videos
           cp -r ./reports/ public/report
       - name: Deploy report page
         uses: peaceiris/actions-gh-pages@v3
