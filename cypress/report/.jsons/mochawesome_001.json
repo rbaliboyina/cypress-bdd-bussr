@@ -1,0 +1,202 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 6,
+    "passes": 6,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-05-08T14:46:27.153Z",
+    "end": "2022-05-08T14:46:40.967Z",
+    "duration": 13814,
+    "testsRegistered": 6,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c2b1be0a-d87c-4a48-a232-de96fa8b010a",
+      "title": "",
+      "fullFile": "cypress/integration/features/ui/fleet-admin/signup-scenarios.feature",
+      "file": "cypress/integration/features/ui/fleet-admin/signup-scenarios.feature",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1fa9a6e9-cf7c-415d-bd0e-8103f534fad8",
+          "title": "Fleet-Admin signup related test cases",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "validating error message for invalid email on Sign-up page (example #1)",
+              "fullTitle": "Fleet-Admin signup related test cases validating error message for invalid email on Sign-up page (example #1)",
+              "timedOut": null,
+              "duration": 4439,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "7f8ecd61-5378-457d-963d-0181c3cf2cf4",
+              "parentUUID": "1fa9a6e9-cf7c-415d-bd0e-8103f534fad8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "validating error message for invalid email on Sign-up page (example #2)",
+              "fullTitle": "Fleet-Admin signup related test cases validating error message for invalid email on Sign-up page (example #2)",
+              "timedOut": null,
+              "duration": 1480,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "cbdeb3ce-67c3-49b8-8419-2f43c01a8030",
+              "parentUUID": "1fa9a6e9-cf7c-415d-bd0e-8103f534fad8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "validating error message for invalid email on Sign-up page (example #3)",
+              "fullTitle": "Fleet-Admin signup related test cases validating error message for invalid email on Sign-up page (example #3)",
+              "timedOut": null,
+              "duration": 936,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "9cb00d80-2617-423f-9deb-511d5f06e3f9",
+              "parentUUID": "1fa9a6e9-cf7c-415d-bd0e-8103f534fad8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "validating error message for invalid email on Sign-up page (example #4)",
+              "fullTitle": "Fleet-Admin signup related test cases validating error message for invalid email on Sign-up page (example #4)",
+              "timedOut": null,
+              "duration": 1013,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "916fd1f9-f98a-4863-9b8f-4ddabc3d790a",
+              "parentUUID": "1fa9a6e9-cf7c-415d-bd0e-8103f534fad8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "validating error message for invalid email on Sign-up page (example #5)",
+              "fullTitle": "Fleet-Admin signup related test cases validating error message for invalid email on Sign-up page (example #5)",
+              "timedOut": null,
+              "duration": 954,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "15231a55-f310-4a8b-8985-6d7015d0907e",
+              "parentUUID": "1fa9a6e9-cf7c-415d-bd0e-8103f534fad8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "validating error message for invalid email on Sign-up page (example #6)",
+              "fullTitle": "Fleet-Admin signup related test cases validating error message for invalid email on Sign-up page (example #6)",
+              "timedOut": null,
+              "duration": 950,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {},
+              "uuid": "7da46dc1-c9c2-4bf7-bdbc-baf199c65773",
+              "parentUUID": "1fa9a6e9-cf7c-415d-bd0e-8103f534fad8",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "7f8ecd61-5378-457d-963d-0181c3cf2cf4",
+            "cbdeb3ce-67c3-49b8-8419-2f43c01a8030",
+            "9cb00d80-2617-423f-9deb-511d5f06e3f9",
+            "916fd1f9-f98a-4863-9b8f-4ddabc3d790a",
+            "15231a55-f310-4a8b-8985-6d7015d0907e",
+            "7da46dc1-c9c2-4bf7-bdbc-baf199c65773"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 9772,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress\\report\\.jsons",
+        "charts": true,
+        "embeddedScreenshots": true,
+        "overwrite": false,
+        "json": true,
+        "html": false
+      },
+      "version": "6.2.0"
+    }
+  }
+}
