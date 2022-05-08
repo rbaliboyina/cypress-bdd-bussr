@@ -2,22 +2,22 @@ Feature: Fleet-Admin signup related test cases
 
     All Signup related test cases developed in this feature file
 
-    Background: fleet-admin signup page
-        Given user navigates to Signup page
+    # Background: fleet-admin signup page
+    #     Given user navigates to Signup page
 
-    @regression @negative @signup-negative
-    Scenario Outline:  validating error message for invalid email on Sign-up page
-        When user enter <invalid_email> on Email Address field
-        Then user should get invalid email <error_message>
+    # @regression @negative @signup-negative
+    # Scenario Outline:  validating error message for invalid email on Sign-up page
+    #     When user enter <invalid_email> on Email Address field
+    #     Then user should get invalid email <error_message>
 
-        Examples:
-            | invalid_email            | error_message      |
-            | errmail@log.com1         | Email is not valid |
-            | errmail@mail#archive.com | Email is not valid |
-            | errormail.def@mail       | Email is not valid |
-            | errormail.def@mail..com  | Email is not valid |
-            | errormail..def@mail.com  | Email is not valid |
-            | .errormail@gmail.com     | Email is not valid |
+    #     Examples:
+    #         | invalid_email            | error_message      |
+    #         | errmail@log.com1         | Email is not valid |
+    #         | errmail@mail#archive.com | Email is not valid |
+    #         | errormail.def@mail       | Email is not valid |
+    #         | errormail.def@mail..com  | Email is not valid |
+    #         | errormail..def@mail.com  | Email is not valid |
+    #         | .errormail@gmail.com     | Email is not valid |
 
     # @regression @negative
     # Scenario Outline: validating error message for registred email

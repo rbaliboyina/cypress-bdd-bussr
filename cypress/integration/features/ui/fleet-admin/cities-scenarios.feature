@@ -2,17 +2,17 @@ Feature: Cities related test cases under fleet admin portal
 
     All Cities related test cases developed in this feature file
 
-    # Background: fleet-admin login page
-    #     Given user navigates to login page
-    #     Given user enter Email in email field
-    #     Given user enter Password in password field
-    #     Given user click on Sign In button
-    #     Then user should land in overview page
+    Background: fleet-admin login page
+        Given user navigates to login page
+        Given user enter Email in email field
+        Given user enter Password in password field
+        Given user click on Sign In button
+        Then user should land in overview page
 
-    # @regression @positive
-    # Scenario: To Verify Cities Tab
-    #     Given user click on Cities link
-    #     Then user should able to view cities page
+    @regression @positive
+    Scenario: To Verify Cities Tab
+        Given user click on Cities link
+        Then user should able to view cities page
 
     # @regression @positive
     # Scenario: To Verify Add New City Button
