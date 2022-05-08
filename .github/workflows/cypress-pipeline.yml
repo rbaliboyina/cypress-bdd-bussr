@@ -1,0 +1,16 @@
+name: cypress tests
+on: [push]
+jobs:
+  cypress-smoke-run:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2.4.2
+      - name: setup npm package
+        run: npm install         
+      - name: run test scripts
+        uses: cypress-io/github-action@v2.9.7
+        with:
+          start: npm run cypress:smoke:headless      
+      - name: generate the results
+        run: npm run generate:htmlreport
