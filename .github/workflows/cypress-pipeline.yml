@@ -7,10 +7,29 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2.4.2
       - name: setup npm package
-        run: npm install         
+        run: 
+              npm install
+              $(npm bin)/cypress cache path
+              $(npm bin)/cypress cache list
+              $(npm bin)/cypress verify   
+
       - name: run test scripts
         uses: cypress-io/github-action@v2.9.7
         with:
-          start: npx cypress run --spec cypress//integration//features//ui//fleet-admin//signup-scenarios.feature
-      - name: generate the results
+          start: npm run cypress:headless
+        continue-on-error: true
+
+      - name: generate the HTML Report
         run: node .//cypress//htmlreport.js
+
+      - name: Copy test execution screenshots and videos
+        run: |
+          mkdir public
+          cp -r cypress/screenshots public/screenshots
+          cp -r cypress/videos public/videos
+          cp -r ./reports/ public/report
+      - name: Deploy report page
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public

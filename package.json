@@ -8,8 +8,8 @@
     "test": "test",
     "cypress:open": "cypress open",
     "cypress:build": "npm i",
-    "cypress:smoke:headless": "cypress run --spec cypress//integration//features//ui//fleet-admin//signup-scenarios.feature",
-    "cypress:smoke": "cypress run --spec cypress//integration//features//ui//fleet-admin//signup-scenarios.feature --headed --browser chrome",
+    "cypress:headless": "cypress run --spec cypress//integration//features//ui//fleet-admin//signup-scenarios.feature",
+    "cypress:headed": "cypress run --spec cypress//integration//features//ui//fleet-admin//signup-scenarios.feature --headed --browser chrome",
     "generate:htmlreport": "node .//cypress//htmlreport.js"
   },
   "author": "bussr", 
