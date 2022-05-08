@@ -12,7 +12,7 @@
     "cypress:smoke": "cypress run --spec cypress//integration//features//ui//fleet-admin//signup-scenarios.feature --headed --browser chrome",
     "generate:htmlreport": "node .//cypress//htmlreport.js"
   },
-  "author": "bussr",
+  "author": "bussr", 
   "license": "ISC",
   "devDependencies": {
     "chai-colors": "^1.0.1",

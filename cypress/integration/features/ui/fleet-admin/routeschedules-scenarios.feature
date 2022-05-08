@@ -2,17 +2,17 @@ Feature: Routeschedules related test cases under fleet admin portal
 
     All Routeschedules related test cases developed in this feature file
 
-    Background: fleet-admin login page
-        Given user navigates to login page
-        Given user enter Email in email field
-        Given user enter Password in password field
-        Given user click on Sign In button
-        Then user should land in overview page
+    # Background: fleet-admin login page
+    #     Given user navigates to login page
+    #     Given user enter Email in email field
+    #     Given user enter Password in password field
+    #     Given user click on Sign In button
+    #     Then user should land in overview page
 
-    @regression @positive
-    Scenario: verify routeschedules tab
-        Given user click on Routeschedules link
-        Then user should land in Routeschedules page
+    # @regression @positive
+    # Scenario: verify routeschedules tab
+    #     Given user click on Routeschedules link
+    #     Then user should land in Routeschedules page
 
 #     @regression @positive
 #     Scenario: verify add new routeschedules tab

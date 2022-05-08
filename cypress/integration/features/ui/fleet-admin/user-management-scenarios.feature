@@ -2,37 +2,37 @@ Feature: User management related test cases under fleet admin portal
 
     All user management related test cases developed in this feature file
 
-    Background: fleet-admin login page
-        Given user navigates to login page
-        Given user enter Email in email field
-        Given user enter Password in password field
-        Given user click on Sign In button
-        Then user should land in overview page
+    # Background: fleet-admin login page
+    #     Given user navigates to login page
+    #     Given user enter Email in email field
+    #     Given user enter Password in password field
+    #     Given user click on Sign In button
+    #     Then user should land in overview page
 
-    @regression @positive
-    Scenario: View User Administration
-        Given user should able to view User Administration
+    # @regression @positive
+    # Scenario: View User Administration
+    #     Given user should able to view User Administration
 
-    @regression @positive
-    Scenario: Validate Add New User button
-        Given user click on User Management
-        And user click on Add New User button in User Management page
-        Then user should land in User Management page
+    # @regression @positive
+    # Scenario: Validate Add New User button
+    #     Given user click on User Management
+    #     And user click on Add New User button in User Management page
+    #     Then user should land in User Management page
 
-    @regression @positive
-    Scenario: View elements in Add New User Page
-        Given user click on User Management
-        And user click on Add New User button in User Management page
-        Then user is able to view Add New User Form
-        And user is able to view User Role dropdown field in Add New User form
-        And user is able to view Full Name input field in Add New User form
-        And user is able to view Email Address input field in Add New User form
-        And user is able to view Auth Password input field in Add New User form
-        And user is able to view Phone input field in Add New User form
-        And user is able to view License No input field in Add New User form
-        And user is able to view License Expire field in Add New User form
-        And user is able to view Status with Active and Inactive buttons in Add New User form
-        And user is able to view Cancel and Add User buttons in Add New User form
+    # @regression @positive
+    # Scenario: View elements in Add New User Page
+    #     Given user click on User Management
+    #     And user click on Add New User button in User Management page
+    #     Then user is able to view Add New User Form
+    #     And user is able to view User Role dropdown field in Add New User form
+    #     And user is able to view Full Name input field in Add New User form
+    #     And user is able to view Email Address input field in Add New User form
+    #     And user is able to view Auth Password input field in Add New User form
+    #     And user is able to view Phone input field in Add New User form
+    #     And user is able to view License No input field in Add New User form
+    #     And user is able to view License Expire field in Add New User form
+    #     And user is able to view Status with Active and Inactive buttons in Add New User form
+    #     And user is able to view Cancel and Add User buttons in Add New User form
 
     # @regression @positive
     # Scenario: Validate close button in Add New User page

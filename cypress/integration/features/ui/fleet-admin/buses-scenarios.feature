@@ -2,17 +2,17 @@ Feature: Buses related test cases under fleet admin portal
 
     All Buses related test cases developed in this feature file
 
-    Background: fleet-admin login page
-        Given user navigates to login page
-        Given user enter Email in email field
-        Given user enter Password in password field
-        Given user click on Sign In button
-        Then user should land in overview page
+    # Background: fleet-admin login page
+    #     Given user navigates to login page
+    #     Given user enter Email in email field
+    #     Given user enter Password in password field
+    #     Given user click on Sign In button
+    #     Then user should land in overview page
 
-    @regression @positive
-    Scenario: verify buses tab
-        Given user click on Buses link
-        Then user should land in Buses page
+    # @regression @positive
+    # Scenario: verify buses tab
+    #     Given user click on Buses link
+    #     Then user should land in Buses page
 
     # @regression @positive
     # Scenario: To verify add new bus button

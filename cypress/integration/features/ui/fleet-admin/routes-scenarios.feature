@@ -2,17 +2,17 @@ Feature: Routes related test cases under fleet admin portal
 
     All Routes related test cases developed in this feature file
 
-    Background: fleet-admin login page
-        Given user navigates to login page
-        Given user enter Email in email field
-        Given user enter Password in password field
-        Given user click on Sign In button
-        Then user should land in overview page
+    # Background: fleet-admin login page
+    #     Given user navigates to login page
+    #     Given user enter Email in email field
+    #     Given user enter Password in password field
+    #     Given user click on Sign In button
+    #     Then user should land in overview page
 
-    @regression @positive
-    Scenario: verify routes tab
-        Given user click on Routes link
-        Then user should land in Routes page
+    # @regression @positive
+    # Scenario: verify routes tab
+    #     Given user click on Routes link
+    #     Then user should land in Routes page
 
     # @regression @positive
     # Scenario: verify add new route tab

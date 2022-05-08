@@ -13,4 +13,4 @@ jobs:
         with:
           start: npm run cypress:smoke:headless      
       - name: generate the results
-        run: npm run generate:htmlreport
+        run: node .//cypress//htmlreport.js
